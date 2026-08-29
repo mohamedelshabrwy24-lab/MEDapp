@@ -658,12 +658,24 @@ class ThreadedHTTPServer(socketserver.ThreadingMixIn, http.server.HTTPServer):
     daemon_threads = True
     allow_reuse_address = True
 
-def run_server(port=8000):
+def run_server(port=None):
     env = load_env()
-    try:
-        port = int(env.get('SERVER_PORT', port))
-    except Exception:
-        port = 8000
+    if port is None:
+        if len(sys.argv) > 1:
+            try:
+                port = int(sys.argv[1])
+            except Exception:
+                port = None
+        if port is None and 'PORT' in os.environ:
+            try:
+                port = int(os.environ['PORT'])
+            except Exception:
+                port = None
+        if port is None:
+            try:
+                port = int(env.get('SERVER_PORT', 8000))
+            except Exception:
+                port = 8000
 
     print("\n=======================================================")
     print("  [MedRef Secure Gateway Server - Phase 5 Active]")
@@ -683,5 +695,4 @@ def run_server(port=8000):
             httpd.server_close()
 
 if __name__ == '__main__':
-    port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
-    run_server(port)
+    run_server()
