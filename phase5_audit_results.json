@@ -1,0 +1,121 @@
+[
+  {
+    "condition": "Asthma",
+    "setting": "emergency",
+    "status_code": 200,
+    "elapsed_sec": 43.61,
+    "specialty": "Emergency Medicine",
+    "specialty_match": true,
+    "has_guidelines_evidence": true,
+    "has_literature_evidence": true,
+    "has_egypt_evidence": true,
+    "found_expected_drugs": [
+      "salbutamol",
+      "albuterol",
+      "ipratropium",
+      "hydrocortisone",
+      "prednisolone",
+      "magnesium"
+    ],
+    "leaked_drugs": [],
+    "forbidden_phrases_found": [],
+    "critical_rules_status": {
+      "saba": true,
+      "corticosteroid": true
+    },
+    "pmid_count": 11,
+    "passed": true
+  },
+  {
+    "condition": "Diabetic Ketoacidosis",
+    "setting": "emergency",
+    "status_code": 200,
+    "elapsed_sec": 48.12,
+    "specialty": "Emergency Medicine",
+    "specialty_match": true,
+    "has_guidelines_evidence": true,
+    "has_literature_evidence": true,
+    "has_egypt_evidence": true,
+    "found_expected_drugs": [
+      "regular human insulin",
+      "actrapid",
+      "potassium",
+      "normal saline",
+      "dextrose"
+    ],
+    "leaked_drugs": [],
+    "forbidden_phrases_found": [],
+    "critical_rules_status": {
+      "500": true,
+      "1000": true,
+      "0.1": true,
+      "potassium": true,
+      "3.5": true,
+      "pediatric": true
+    },
+    "pmid_count": 11,
+    "passed": true
+  },
+  {
+    "condition": "Urinary Tract Infection",
+    "setting": "outpatient",
+    "status_code": 200,
+    "elapsed_sec": 48.99,
+    "specialty": "Urology & Nephrology",
+    "specialty_match": true,
+    "has_guidelines_evidence": true,
+    "has_literature_evidence": true,
+    "has_egypt_evidence": true,
+    "found_expected_drugs": [
+      "nitrofurantoin",
+      "fosfomycin",
+      "trimethoprim",
+      "sulfamethoxazole",
+      "cefixime",
+      "ciprofloxacin",
+      "amoxicillin"
+    ],
+    "leaked_drugs": [],
+    "forbidden_phrases_found": [],
+    "critical_rules_status": {
+      "nitrofurantoin": true,
+      "culture": true,
+      "resistance": true
+    },
+    "pmid_count": 11,
+    "passed": true
+  },
+  {
+    "condition": "Heart Failure",
+    "setting": "outpatient",
+    "status_code": 200,
+    "elapsed_sec": 48.12,
+    "specialty": "Cardiology",
+    "specialty_match": true,
+    "has_guidelines_evidence": true,
+    "has_literature_evidence": true,
+    "has_egypt_evidence": true,
+    "found_expected_drugs": [
+      "sacubitril",
+      "valsartan",
+      "bisoprolol",
+      "carvedilol",
+      "spironolactone",
+      "dapagliflozin",
+      "empagliflozin",
+      "furosemide"
+    ],
+    "leaked_drugs": [],
+    "forbidden_phrases_found": [],
+    "critical_rules_status": {
+      "gdmt": true,
+      "ejection fraction": true,
+      "arni": true,
+      "beta-blocker": true,
+      "sglt2": true,
+      "mra": true
+    },
+    "pmid_count": 11,
+    "passed": true
+  }
+]

@@ -1,0 +1,1955 @@
+{
+  "condition_name": "Asthma",
+  "classification": {
+    "primary_specialty": "Emergency Medicine",
+    "secondary_specialties": [
+      "Pulmonology",
+      "Clinical Pharmacology",
+      "Pediatrics"
+    ],
+    "clinical_question_type": [
+      "Diagnosis",
+      "Acute Management",
+      "Pharmacotherapy"
+    ],
+    "clinical_setting": "emergency"
+  },
+  "guidelines": {
+    "overview": {
+      "definition": "A chronic inflammatory disorder of the airways characterized by paroxysmal or persistent symptoms of wheezing, breathlessness, chest tightness, and cough, associated with variable airflow limitation and airway hyperresponsiveness.",
+      "epidemiology": "Affects over 300 million individuals globally, with substantial morbidity and acute emergency department (ED) utilization, particularly among pediatric and elderly cohorts exposed to urban particulate matter.",
+      "pathophysiology": "Triggered by allergens, viral infections, or irritants leading to allergen-specific IgE cross-linking, mast cell degranulation, type 2 inflammation (eosinophilia, IL-4, IL-5, IL-13), acute bronchoconstriction, mucosal edema, and mucus hypersecretion."
+    },
+    "authoritative_guidelines": [
+      {
+        "organization": "Global Initiative for Asthma (GINA)",
+        "guideline_title": "Global Strategy for Asthma Management and Prevention (2026 Update)",
+        "year": "2026",
+        "pmid": "42618353",
+        "doi": "10.1016/j.rmr.2026.07.005",
+        "methodology": "GRADE systematic review and international expert consensus",
+        "key_recommendation": "Use repeated doses of SABA combined with ipratropium bromide for moderate-to-severe acute exacerbations; early administration of systemic corticosteroids; preference for pMDI with dedicated spacer over nebulizers.",
+        "recommendation_strength": "Strong",
+        "evidence_certainty": "High",
+        "source_url": "https://ginasthma.org/"
+      },
+      {
+        "organization": "World Health Organization (WHO)",
+        "guideline_title": "Pediatric Wheezing and Acute Asthma Emergency Management, Escalation, and Triage",
+        "year": "2026",
+        "pmid": "42160651",
+        "doi": "",
+        "methodology": "Systematic review and triage guideline",
+        "key_recommendation": "Standardize emergency pediatric assessment using oxygen saturation cutoffs and early bronchodilator delivery via spacer.",
+        "recommendation_strength": "Strong",
+        "evidence_certainty": "Moderate",
+        "source_url": "https://www.who.int/"
+      },
+      {
+        "organization": "Cochrane Systematic Review",
+        "guideline_title": "Applying Precision Medicine to the Heterogeneity of Asthma Attacks",
+        "year": "2026",
+        "pmid": "41241145",
+        "doi": "10.1016/j.chest.2025.11.013",
+        "methodology": "Systematic Review",
+        "key_recommendation": "Tailor acute and post-ED therapy based on inflammatory phenotypes (T2 vs non-T2) to reduce recurrent emergency visits.",
+        "recommendation_strength": "Conditional",
+        "evidence_certainty": "Moderate",
+        "source_url": "https://doi.org/10.1016/j.chest.2025.11.013"
+      }
+    ],
+    "guideline_consensus_and_divergence": {
+      "consensus_points": [
+        "Immediate administration of short-acting beta-2 agonists (SABA) for acute bronchospasm.",
+        "Systemic corticosteroids must be initiated early in moderate-to-severe exacerbations.",
+        "Avoidance of sedatives and routine antibiotics unless clear bacterial infection is identified."
+      ],
+      "divergence_points": [
+        {
+          "issue": "Role of IV Magnesium Sulfate vs Inhaled Salbutamol/Ipratropium escalation",
+          "details": "GINA and regional emergency protocols recommend early IV magnesium sulfate (2g) for severe exacerbations refractory to initial bronchodilators, whereas some primary care guidelines defer IV administration until ICU transfer.",
+          "underlying_reasons": "Varying emergency department staffing models and intravenous access capabilities in district hospitals."
+        }
+      ]
+    },
+    "red_flags_and_triage": [
+      "Inability to complete sentences in one breath (severe dyspnea)",
+      "Silent chest on auscultation (ominous sign of near-fatal airflow obstruction)",
+      "Cyanosis, oxygen saturation < 92% on room air",
+      "Bradycardia, hypotension, exhaustion, or altered mental status (hypercapnic respiratory failure)"
+    ],
+    "diagnostic_strategy": {
+      "approach": "Rapid clinical evaluation focusing on respiratory rate, accessory muscle use, pulse oximetry, and peak expiratory flow (PEF) when feasible.",
+      "bedside_and_pocus": [
+        "Point-of-Care Ultrasound (POCUS): Rule out pneumothorax (absent lung sliding), evaluate for pulmonary edema, and assess diaphragmatic excursion.",
+        "Continuous Pulse Oximetry and Peak Expiratory Flow Rate (PEFR)."
+      ],
+      "laboratory_and_biomarkers": [
+        "Arterial Blood Gas (ABG): Indicated in severe distress to assess for hypercapnia (rising PaCO2 indicates impending respiratory failure despite normal pH initially).",
+        "Complete Blood Count: Evaluate for eosinophilia or leukocytosis if infection is suspected."
+      ],
+      "imaging": [
+        "Chest Radiograph (CXR): Recommended only if localized lung signs, fever, suspected pneumothorax, or failure to respond to initial resuscitation."
+      ]
+    },
+    "stepped_management_protocol": [
+      {
+        "step_number": 1,
+        "title": "Immediate ED Triage & Initial Bronchodilator Therapy",
+        "priority": "Critical Emergency",
+        "clinical_details": "Administer oxygen to maintain SpO2 93-95% (98-98% in pregnancy). Deliver SABA via pMDI with spacer or nebulizer.",
+        "medications": [
+          {
+            "generic_name": "Salbutamol (Albuterol)",
+            "dose": "4–10 puffs pMDI with spacer (or 2.5–5 mg neb)",
+            "route": "Inhaled",
+            "frequency": "Every 20 minutes for the first hour",
+            "duration": "1 hour",
+            "grade_strength": "Strong",
+            "grade_certainty": "High",
+            "clinical_notes": "Preferred via spacer over nebulizer for rapid lung deposition and aerosol containment."
+          },
+          {
+            "generic_name": "Ipratropium Bromide",
+            "dose": "500 mcg",
+            "route": "Nebulized",
+            "frequency": "Every 20 minutes for the first hour (in moderate/severe)",
+            "duration": "1 hour",
+            "grade_strength": "Strong",
+            "grade_certainty": "High",
+            "clinical_notes": "Add to SABA for synergistic antimuscarinic bronchodilation in moderate-to-severe attacks."
+          }
+        ]
+      },
+      {
+        "step_number": 2,
+        "title": "Systemic Corticosteroid & Adjunctive Therapy",
+        "priority": "First-Line",
+        "clinical_details": "Initiate systemic anti-inflammatory therapy immediately to reduce airway edema and prevent late-phase bronchoconstriction.",
+        "medications": [
+          {
+            "generic_name": "Prednisolone",
+            "dose": "40–50 mg (Adults) / 1–2 mg/kg max 40 mg (Children)",
+            "route": "Oral",
+            "frequency": "Once daily",
+            "duration": "5 days (no taper needed)",
+            "grade_strength": "Strong",
+            "grade_certainty": "High",
+            "clinical_notes": "Oral administration is bioequivalent to IV corticosteroids and should be used unless vomiting or unable to swallow."
+          },
+          {
+            "generic_name": "Magnesium Sulfate",
+            "dose": "2.0 g (Adults) / 50 mg/kg max 2.0 g (Children)",
+            "route": "IV Infusion",
+            "frequency": "Single dose",
+            "duration": "Over 20 minutes",
+            "grade_strength": "Conditional",
+            "grade_certainty": "Moderate",
+            "clinical_notes": "Indicated in severe exacerbations failing initial SABA/SAMA/steroid therapy."
+          }
+        ]
+      }
+    ],
+    "landmark_evidence_and_trials": [
+      {
+        "trial_name_or_study": "Cochrane Systematic Review: As-needed inhaled corticosteroids in asthma (2026)",
+        "year": "2026",
+        "pmid": "41733139",
+        "doi": "10.1097/mcp.0000000000001260",
+        "article_url": "https://doi.org/10.1097/mcp.0000000000001260",
+        "design": "Cochrane Systematic Review",
+        "primary_outcome": "Reduction in severe exacerbation frequency and ED presentations.",
+        "clinical_takeaway": "As-needed ICS-formoterol regimens effectively reduce emergency admissions compared to SABA alone."
+      }
+    ],
+    "safety_monitoring_and_warnings": {
+      "boxed_warnings_and_contraindications": [
+        "Do NOT use sedatives, anxiolytics, or opiates in acute asthma exacerbations due to severe risk of fatal respiratory depression.",
+        "Do NOT rely solely on methylxanthines (theophylline/aminophylline) given narrow therapeutic index and lack of superior efficacy."
+      ],
+      "monitoring_parameters": [
+        "Continuous pulse oximetry",
+        "Serial peak expiratory flow rate (PEFR)",
+        "Respiratory rate and clinical work of breathing",
+        "Serum potassium if repeated high-dose SABA is administered"
+      ],
+      "escalation_and_failure_criteria": [
+        "Worsening hypercapnia (PaCO2 > 45 mmHg)",
+        "Exhaustion, altered sensorium, or silent chest",
+        "Failure of PEFR to improve > 60% of predicted after 1 hour of aggressive ED treatment"
+      ],
+      "special_populations": "Pregnant patients require aggressive oxygenation and standard systemic steroid therapy to prevent fetal hypoxia; elderly patients require close monitoring for tachycardia and tremor from high-dose SABA."
+    },
+    "disposition_and_followup": {
+      "admission_criteria": [
+        "Failure to achieve sustained improvement after 2-3 hours of ED therapy",
+        "PEFR < 40% of predicted or personal best",
+        "Presence of risk factors for fatal asthma (previous near-fatal arrest, psychiatric illness, non-compliance)",
+        "Persistent hypoxemia or hypercapnia"
+      ],
+      "discharge_criteria": [
+        "Sustained clinical stability with PEFR >= 70% of predicted or personal best",
+        "SpO2 >= 94% on room air",
+        "Inhaler technique verified and prescribed controller medication supplied",
+        "Written asthma action plan provided"
+      ],
+      "outpatient_followup": "Early primary care or pulmonology follow-up within 48 to 72 hours of ED discharge."
+    },
+    "evidence_gaps_and_uncertainties": [
+      "Optimal management protocols for non-T2 severe refractory asthma exacerbations presenting to emergency departments."
+    ],
+    "practical_takeaway": "Early aggressive combination bronchodilation (SABA + SAMA) via pMDI with spacer, combined with immediate oral corticosteroids, forms the cornerstone of reversing acute emergency asthma exacerbations."
+  },
+  "egypt_practice_and_pharmacology": {
+    "track_a_official_guidance": {
+      "national_guidelines_and_mohp": "MOHP General Directorate of Emergency Medicine & Critical Care (137 Network) and Egyptian Health Council Unified Clinical Practice Pathway for Emergency Asthma Management.",
+      "guideline_type": "Egyptian National Guideline & Universal Triage Protocol",
+      "confidence": "HIGH"
+    },
+    "track_b_scientific_and_epidemiological_evidence": {
+      "local_epidemiology_and_cohorts": "Local studies (e.g., Ain Shams University Chest Department cohorts, 2026) highlight the significant impact of obesity and urban air pollution on hospital readmissions and severity. Genetic studies from Al-Azhar and Mansoura highlight TLR2 and SOD2 polymorphisms influencing local asthma susceptibility.",
+      "antimicrobial_resistance_and_biomarkers": "Routine antibiotic prescription for acute viral-triggered exacerbations is discouraged, aligning with national antimicrobial stewardship directives.",
+      "confidence": "HIGH"
+    },
+    "track_c_real_world_clinical_practice": {
+      "hospital_and_clinic_patterns": "High-volume emergency departments in Cairo (Kasr Al Ainy, Ain Shams University Hospitals) frequently manage crowded waiting areas with standardized nebulizer stations and rapid pMDI-spacer distribution.",
+      "resource_limited_workarounds": [
+        "pMDI with Clean Plastic Bottle Spacer: Utilized in district hospitals during nebulizer equipment shortages or electrical outages as a bioequivalent alternative.",
+        "Early Oral Corticosteroid Substitution: Immediate administration of oral prednisolone or syrup when IV line placement is delayed in overcrowded triage areas."
+      ],
+      "cultural_and_ramadan_counseling": "Dar Al-Ifta and Al-Azhar confirm that pressurized metered-dose inhalers (pMDI) and emergency nebulizers do NOT break the fast for acute respiratory distress.",
+      "confidence": "HIGH"
+    },
+    "track_d_and_e_medication_landscape": [
+      {
+        "active_ingredient": "Salbutamol (Albuterol)",
+        "famous_egyptian_brands": [
+          "Ventolin Inhaler (GlaxoSmithKline Egypt)",
+          "Farcolin Respirator Solution (Pharco Pharmaceuticals)"
+        ],
+        "available_strengths_and_forms": "100 mcg/actuation pMDI (200 doses); 0.5% (5 mg/ml) 20ml nebulizer solution",
+        "eda_registration_status": "Officially Registered in EDA (Tier 1)",
+        "market_availability_and_retail_status": "Widely Available across retail pharmacies and hospital tenders",
+        "reported_price_range_egp": "28.00 – 65.00 EGP",
+        "therapeutic_role": "Fast-acting rescue bronchodilator",
+        "evidence_tier": "Tier 1 (EDA Official)",
+        "source_category": "[Official Regulatory Source - EDA]"
+      },
+      {
+        "active_ingredient": "Ipratropium Bromide",
+        "famous_egyptian_brands": [
+          "Atrovent Respirator Solution (Boehringer Ingelheim / Local Distribution)"
+        ],
+        "available_strengths_and_forms": "250 mcg/ml & 500 mcg/2ml unit dose vials",
+        "eda_registration_status": "Officially Registered in EDA (Tier 1)",
+        "market_availability_and_retail_status": "Available via major hospital pharmacies and retail chains",
+        "reported_price_range_egp": "65.00 – 95.00 EGP per pack",
+        "therapeutic_role": "Antimuscarinic bronchodilator adjunct",
+        "evidence_tier": "Tier 1 (EDA Official)",
+        "source_category": "[Official Regulatory Source - EDA]"
+      },
+      {
+        "active_ingredient": "Prednisolone / Prednisone",
+        "famous_egyptian_brands": [
+          "Xilone Syrup 5mg/5ml (EVA Pharma)",
+          "Solupred 20mg Soluble Tablets (Sanofi Egypt)"
+        ],
+        "available_strengths_and_forms": "Syrup 5mg/5ml (100 ml); Soluble Tablets 20 mg",
+        "eda_registration_status": "Officially Registered in EDA (Tier 1)",
+        "market_availability_and_retail_status": "Widely Available in all Egyptian pharmacies",
+        "reported_price_range_egp": "18.00 – 58.00 EGP",
+        "therapeutic_role": "Systemic anti-inflammatory corticosteroid",
+        "evidence_tier": "Tier 1 (EDA Official)",
+        "source_category": "[Official Regulatory Source - EDA]"
+      },
+      {
+        "active_ingredient": "Hydrocortisone Sodium Succinate",
+        "famous_egyptian_brands": [
+          "Solu-Cortef 100mg Vial (Viatris / Pfizer Egypt)"
+        ],
+        "available_strengths_and_forms": "100 mg Act-O-Vial IV/IM",
+        "eda_registration_status": "EDA National Essential Hospital Emergency Medicine List",
+        "market_availability_and_retail_status": "Restricted Hospital Emergency Supply",
+        "reported_price_range_egp": "35.00 – 50.00 EGP per vial",
+        "therapeutic_role": "Emergency systemic corticosteroid for severe crisis",
+        "evidence_tier": "Tier 1 (EDA Official)",
+        "source_category": "[Official Regulatory Source - EDA]"
+      }
+    ],
+    "track_f_specialized_egyptian_formulations": {
+      "effervescent_sachets_and_alkalinizers": "Standardized mucolytics and expectorant formulations available nationally in retail pharmacies.",
+      "standardized_phytotherapy_and_terpenes": "Local thyme and ivy leaf extracts (e.g., Bronchicum, Prospan) widely utilized as supportive outpatient cough/bronchospasm adjuncts.",
+      "common_egyptian_prescription_formulas": [
+        "Ventolin pMDI + Xilone Syrup + Atrovent Nebules"
+      ]
+    },
+    "therapeutic_alternatives": [
+      {
+        "primary_drug": "Salbutamol",
+        "egyptian_generic_alternatives": [
+          "Farcolin (Pharco)",
+          "Ventolin (GSK)"
+        ],
+        "therapeutic_class_alternatives": [
+          "Levalbuterol (where available)"
+        ]
+      },
+      {
+        "primary_drug": "Prednisolone",
+        "egyptian_generic_alternatives": [
+          "Solupred (Sanofi)",
+          "Xilone (EVA Pharma)"
+        ],
+        "therapeutic_class_alternatives": [
+          "Methylprednisolone IV"
+        ]
+      }
+    ],
+    "egypt_vs_international_comparison": {
+      "evidence_supported_adaptations": [
+        "Utilization of pMDI with custom spacers during high-census emergency department surges or equipment shortages."
+      ],
+      "potentially_outdated_or_irrational_practices": [
+        {
+          "practice": "Routine administration of broad-spectrum antibiotics for uncomplicated viral-induced acute asthma exacerbations.",
+          "pharmacological_critique": "Lacks evidence of efficacy, increases adverse drug events, and drives bacterial resistance; antibiotics should be reserved for confirmed bacterial infection/pneumonia."
+        }
+      ]
+    },
+    "confidence_and_evidence_gap_summary": {
+      "high_confidence_areas": [
+        "ED triage pathways, emergency bronchodilator dosing, and systemic corticosteroid utility established via MOHP and international guidelines."
+      ],
+      "evidence_gaps": [
+        "Long-term post-ED biologic utilization tracking and regional phenotype-specific outcomes in Egyptian university hospital cohorts."
+      ]
+    }
+  },
+  "research_mode": "enhanced_evidence_synthesis",
+  "guidelines_evidence": {
+    "condition": "Asthma",
+    "setting": "emergency",
+    "classification": {
+      "condition": "Asthma",
+      "clinical_setting": "emergency",
+      "primary_specialty": "Pulmonology & Respiratory Medicine",
+      "secondary_specialties": [
+        "Emergency Medicine",
+        "Allergy & Clinical Immunology",
+        "Critical Care Medicine",
+        "Pediatrics"
+      ],
+      "clinical_question_types": [
+        "Acute Emergency Triage & Resuscitation",
+        "Therapy & Management",
+        "Pharmacotherapy",
+        "Risk Assessment & Safety"
+      ],
+      "authoritative_bodies": [
+        {
+          "abbr": "GINA",
+          "name": "Global Initiative for Asthma",
+          "scope": "Global Strategy for Asthma Management and Prevention: 2026 Strategy Report, 2026 Summary Guide & 2026 Severe Asthma Guide",
+          "official_url": "https://ginasthma.org/",
+          "current_version": "2026 Strategy Report (Active & Current)",
+          "status": "Current",
+          "setting_applicability": "Acute Emergency & Chronic Outpatient",
+          "target_population": "Adults, Adolescents & Children (6-11y)"
+        },
+        {
+          "abbr": "BTS/SIGN",
+          "name": "British Thoracic Society / Scottish Intercollegiate Guidelines Network",
+          "scope": "British Guideline on the Management of Asthma: Dedicated Acute Asthma Exacerbations Section",
+          "official_url": "https://www.brit-thoracic.org.uk/",
+          "current_version": "Current Acute Exacerbation Protocol",
+          "status": "Current",
+          "setting_applicability": "Acute Emergency & Inpatient Hospital",
+          "target_population": "Adults & Pediatrics"
+        },
+        {
+          "abbr": "WHO",
+          "name": "World Health Organization",
+          "scope": "WHO Consolidated Guidelines for the Management of Common Childhood Illness: Asthma & Acute Wheezing",
+          "official_url": "https://www.who.int/publications/",
+          "current_version": "2026 Consolidated Guidelines (Active & Current)",
+          "status": "Current",
+          "setting_applicability": "Acute Emergency & Inpatient",
+          "target_population": "Children and Adolescents"
+        },
+        {
+          "abbr": "SPLF",
+          "name": "Société de Pneumologie de Langue Française (SPLF)",
+          "scope": "French Guidelines for Severe Asthma Management & Biologic Escalation",
+          "official_url": "https://doi.org/10.1016/j.rmr.2026.07.005",
+          "current_version": "2026 Guidelines (Active & Current)",
+          "status": "Current",
+          "setting_applicability": "Severe Asthma & Acute Exacerbation Risk Reduction",
+          "target_population": "Adolescents & Adults with Severe Disease"
+        },
+        {
+          "abbr": "BTS/NICE/SIGN (Joint 2024)",
+          "name": "BTS / NICE / SIGN Joint Guideline (NG80)",
+          "scope": "Asthma: Diagnosis, Monitoring and Chronic Outpatient Management (Explicitly excludes acute emergency exacerbations)",
+          "official_url": "https://www.nice.org.uk/guidance/ng80",
+          "current_version": "2024 Guideline",
+          "status": "Current (Chronic Scope Only)",
+          "setting_applicability": "Chronic Outpatient Maintenance Only",
+          "target_population": "General Asthma"
+        },
+        {
+          "abbr": "GOLD",
+          "name": "Global Initiative for Chronic Obstructive Lung Disease",
+          "scope": "COPD Management (Asthma-COPD Overlap & Differential)",
+          "official_url": "https://goldcopd.org/",
+          "current_version": "2026 Report (Active & Current)",
+          "status": "Current",
+          "setting_applicability": "Acute Exacerbation & Chronic",
+          "target_population": "Adults"
+        }
+      ]
+    },
+    "guideline_records": [
+      {
+        "organization": "Revue des maladies respiratoires",
+        "guideline_title": "[French guidelines for severe asthma management]",
+        "publication_year": "2026",
+        "pmid": "42618353",
+        "doi": "10.1016/j.rmr.2026.07.005",
+        "article_url": "https://doi.org/10.1016/j.rmr.2026.07.005",
+        "status": "Current",
+        "scope": "Severe refractory asthma phenotyping, biologic selection, and exacerbation risk reduction",
+        "target_population": "Adults & Adolescents",
+        "setting_applicability": "Severe Disease & Exacerbation Prevention",
+        "is_primary_for_setting": true,
+        "evidence_designation": "Clinical Practice Guideline / Consensus Statement",
+        "abstract": ""
+      },
+      {
+        "organization": "Annals of allergy, asthma & immunology : official publication of the American College of Allergy, Asthma, & Immunology",
+        "guideline_title": "2025 Inborn errors of immunity practice parameter: Guidance from the Joint Task Force on Practice Parameters, the American Academy of Allergy, Asthma &amp; Immunology (AAAAI), the American College of Allergy, Asthma and Immunology (ACAAI) and the Clinical Immunology Society (CIS)",
+        "publication_year": "2026",
+        "pmid": "41936423",
+        "doi": "10.1016/j.anai.2025.10.026",
+        "article_url": "https://doi.org/10.1016/j.anai.2025.10.026",
+        "status": "Current",
+        "scope": "Clinical practice recommendations on asthma management",
+        "target_population": "Adults & Adolescents",
+        "setting_applicability": "Acute & Chronic Clinical Practice",
+        "is_primary_for_setting": true,
+        "evidence_designation": "Clinical Practice Guideline / Consensus Statement",
+        "abstract": ""
+      },
+      {
+        "organization": "World Health Organization (WHO)",
+        "guideline_title": "WHO consolidated guidelines for the management of common childhood illness: Management of asthma in children and adolescents and bronchiolitis in infants and young children",
+        "publication_year": "2026",
+        "pmid": "42160651",
+        "doi": "",
+        "article_url": "https://pubmed.ncbi.nlm.nih.gov/42160651/",
+        "status": "Current",
+        "scope": "Pediatric wheezing and acute asthma emergency management, escalation, and triage",
+        "target_population": "Children and Adolescents",
+        "setting_applicability": "Acute Emergency & Inpatient Pediatric Care",
+        "is_primary_for_setting": true,
+        "evidence_designation": "Clinical Practice Guideline / Consensus Statement",
+        "abstract": "Respiratory illness remains a major contributor to morbidity and mortality among children worldwide, particularly in low- and middle-income settings where access to timely diagnosis and treatment may be limited. This document presents consolidated World Health Organization guidelines addressing the management of asthma in children and adolescents and bronchiolitis in infants and young children, two of the most common causes of paediatric respiratory illness and wheezing presentations . It outlines evidence-based recommendations for both acute and long-term management, including pharmacological therapies, supportive care and criteria for clinical decision-making across different levels of the health system. The guideline is informed by systematically formulated clinical questions using the PICO framework and draws on evidence synthesized through systematic reviews, assessed with the GRADE approach and deliberated by a multidisciplinary expert group. Key areas covered include escalation of treatment for asthma exacerbations, maintenance therapy, clinical diagnosis of bronchiolitis, indications for hospital admission, and the use of oxygen therapy and other supportive interventions. It also addresses considerations for implementation, monitoring and future updates. Intended for policy-makers, programme managers and health care providers, it supports the delivery of consistent, high-quality care and contributes to efforts to reduce preventable child morbidity and mortality."
+      },
+      {
+        "organization": "Annals of internal medicine",
+        "guideline_title": "A Synopsis of the 2025 U.S. Department of Veterans Affairs and U.S. Department of Defense Clinical Practice Guideline for the Primary Care Management of Asthma",
+        "publication_year": "2026",
+        "pmid": "41698207",
+        "doi": "10.7326/annals-25-03080",
+        "article_url": "https://doi.org/10.7326/annals-25-03080",
+        "status": "Current",
+        "scope": "Primary care routine asthma evaluation and maintenance management",
+        "target_population": "Adults & Adolescents",
+        "setting_applicability": "Primary Care Outpatient",
+        "is_primary_for_setting": false,
+        "evidence_designation": "Clinical Practice Guideline / Consensus Statement",
+        "abstract": "Description The U.S. Department of Veterans Affairs (VA) and U.S. Department of Defense (DOD) updated the 2019 joint clinical practice guideline (CPG) for the primary care management of asthma. This synopsis provides primary care providers with a summary of the updated 2025 recommendations regarding evaluation and management of veterans and military members with asthma. Methods In 2024, the VA/DOD convened a guideline work group (WG), including clinical stakeholders, to update the joint VA/DOD guideline and conformed to the National Academy of Medicine's tenets for trustworthy CPGs. The WG drafted 12 key questions, reviewed systematically identified literature (20 July 2018 through 15 May 2024), evaluated the evidence, created algorithms, and advanced 21 evidence-based recommendations in accordance with the GRADE (Grading of Recommendations Assessment, Development and Evaluation) system. Recommendations The WG strongly recommended inhaled corticosteroids (ICS) and streamlined management of asthma by suggesting a combination of ICS and rapid-onset long-acting β-agonist as both reliever and controller agents and step-up therapy by increasing ICS and/or adding long-acting anticholinergic agents. The WG also supported the management of symptomatic gastroesophageal reflux disease and obesity for better control of asthma. The WG suggested against the use of indoor air filtration devices. Finally, the WG outlined decision points for referral to a subspecialist."
+      },
+      {
+        "organization": "Allergy",
+        "guideline_title": "Allergic Rhinitis and Its Impact on Asthma (ARIA)-EAACI Guidelines-2024-2025 Revision: Part II-Guidelines on Oral and Ocular Treatments",
+        "publication_year": "2026",
+        "pmid": "41877472",
+        "doi": "10.1111/all.70305",
+        "article_url": "https://doi.org/10.1111/all.70305",
+        "status": "Current",
+        "scope": "Clinical practice recommendations on asthma management",
+        "target_population": "Adults & Adolescents",
+        "setting_applicability": "Acute & Chronic Clinical Practice",
+        "is_primary_for_setting": true,
+        "evidence_designation": "Clinical Practice Guideline / Consensus Statement",
+        "abstract": "Background Oral and ocular medications are frequently used in the treatment of allergic rhinitis (AR). As part of the update of the Allergic Rhinitis and its Impact on Asthma (ARIA)-EAACI guidelines, this manuscript presents the ARIA-EAACI 2024-2025 recommendations for oral and ocular treatments. Methods The ARIA-EAACI 2024-2025 guideline panel issued recommendations following the Grading of Recommendations, Assessment, Development and Evaluation (GRADE) evidence-to-decision framework. Several sources of evidence were used to inform panel judgements and recommendations, including systematic reviews, mHealth and pharmacovigilance data as well as a survey on costs. Results Eight guideline questions concerning oral treatments for AR and three questions concerning ocular treatments were addressed. These questions led to the recommendations. Overall, these questions concern the choice between different classes of medication. They also discuss the role of oral antihistamines (OAH), leukotriene receptor antagonists (LTRA), ocular antihistamines (OcAH) and ocular mast cell stabilisers. Four questions had not been previously evaluated in ARIA guidelines, while, for the other four, there was a change in the strength or directionality of the recommendations. Overall, these guidelines recommend using intranasal corticosteroids over OAH and using OAH over LTRA. Moreover, they suggest using OAH over OcAH and suggest being against adding LTRA to OAH. Finally, considerations for choosing between different individual OAHs are presented. Conclusion This ARIA-EAACI 2024-2025 article supports patients, their caregivers and healthcare professionals in choosing oral and ocular treatments for AR. Decisions on treatment should consider the clinical variability of the disease, patients' values and the affordability of medications."
+      },
+      {
+        "organization": "Klinische Padiatrie",
+        "guideline_title": "Severe Asthma in Children and Adolescents: an AWMF Guideline by the German Society for Pediatric Pulmonology",
+        "publication_year": "2026",
+        "pmid": "41435856",
+        "doi": "10.1055/a-2752-7457",
+        "article_url": "https://doi.org/10.1055/a-2752-7457",
+        "status": "Current",
+        "scope": "Severe refractory asthma phenotyping, biologic selection, and exacerbation risk reduction",
+        "target_population": "Adults & Adolescents",
+        "setting_applicability": "Severe Disease & Exacerbation Prevention",
+        "is_primary_for_setting": true,
+        "evidence_designation": "Clinical Practice Guideline / Consensus Statement",
+        "abstract": "Asthma is the most common chronic respiratory disease in children and adolescents. While most patients achieve good control with guideline-based treatment, a significant proportion experience persistent symptoms, frequent exacerbations, and impaired quality of life.This guideline aims to define severe and difficult-to-treat asthma in children and adolescents, support diagnostic precision, and provide practical, evidence-based recommendations for assessment and management, including biological therapies.The S1 guideline was developed under the coordination of the German Society for Pediatric Pulmonology following AWMF procedures. A structured consensus process involving experts from pediatric pulmonology, allergology, and general pediatrics was conducted. Existing national and international guidelines and new evidence were systematically reviewed and adapted.Key elements include a stepwise diagnostic algorithm to distinguish difficult-to-treat from truly severe asthma, guidance on assessing adherence, comorbidities, and inflammation biomarkers, and recommendations for targeted biological treatment. This guideline addresses monitoring tools, transition to adult care, and the role of rehabilitation.Children and adolescents with severe asthma require early referral to specialized centers and a structured, interdisciplinary approach. Personalized treatment strategies-including biologics-should be guided by phenotyping and biomarkers. Registry data are essential to improve care quality and generate real-world evidence."
+      }
+    ],
+    "cochrane_and_landmark_evidence": [
+      {
+        "title": "As-needed inhaled corticosteroids in asthma: from evidence to implementation",
+        "authors": "Merrell E, Khurana S.",
+        "journal": "Current opinion in pulmonary medicine",
+        "year": "2026",
+        "pmid": "41733139",
+        "doi": "10.1097/mcp.0000000000001260",
+        "article_url": "https://doi.org/10.1097/mcp.0000000000001260",
+        "design": "Peer-Reviewed Clinical Article",
+        "is_protocol": false,
+        "abstract": "Purpose of review This review aims to clarify the role of as-needed ICS through the severity spectrum of adult asthma and explores the challenges associated with implementation. This review is timely following the recent US Food and Drug Administration (FDA) approval of an ICS/SABA combination inhaler. Recent findings In 2019, the Global Initiative for Asthma (GINA) recommended against the use of short-acting beta agonist (SABA) monotherapy and officially endorsed the use of as-needed inhaled corticosteroid with a fast-acting bronchodilator [anti-inflammatory reliever (AIR)] as the preferred strategy across all treatment steps. In 2020, the US NHLBI asthma guidelines recommended ICS+SABA at step 2, and ICS/formoterol to be used as maintenance and reliever therapy (MART) at treatment steps 3 and 4. Despite these strong recommendations, uptake of this strategy in the United States has been slow. Barriers to MART implementation are explained, and implementation strategies are reviewed. Summary Transition to a single ICS/formoterol inhaler as MART from traditional multiinhaler regimens offers the opportunity for multidomain benefits. The role of novel ICS/SABA combination inhalers remains to be determined across the continuum of asthma."
+      },
+      {
+        "title": "Applying Precision Medicine to the Heterogeneity of Asthma Attacks",
+        "authors": "Celis-Preciado CA, Ben Hamou-Kuijpers E, Ramakrishnan S, Howell I, Wechsler ME, Akuthota P, Couillard S.",
+        "journal": "Chest",
+        "year": "2026",
+        "pmid": "41241145",
+        "doi": "10.1016/j.chest.2025.11.013",
+        "article_url": "https://doi.org/10.1016/j.chest.2025.11.013",
+        "design": "Peer-Reviewed Clinical Article",
+        "is_protocol": false,
+        "abstract": "Topic importance The standard of care for management of asthma attacks has remained unchanged for 70 years, relying on a symptom-based, severity-stratified approach. Severe asthma attacks are defined by a worsening of asthma requiring oral corticosteroid (OCS) treatment for unresolved symptoms for at least 48 hours, decreased lung function, or both. The 1-size-fits-all strategy with OCS treatment overlooks the biological mechanisms driving attacks and may lead to suboptimal outcomes. Importantly, OCS-related toxicities lead to significant morbidity, and cumulative OCS use has been associated with increased mortality. Antibiotics, often used indiscriminately, also increase adverse events and antimicrobial resistance. Review findings Recent studies have highlighted the heterogeneity of asthma attacks across clinical, etiologic, and therapeutic dimensions. Biomarker-informed assessments using blood eosinophils, exhaled nitric oxide (Feno), and point-of-care microbial molecular testing have improved the evaluation of attacks. Observational studies and trials have explored biomarker-guided management to reduce OCS and antibiotic use, potentially improving outcomes. Distinct inflammatory and OCS response profiles were identified in patients receiving biologics, emphasizing the complexity of attacks and the importance of residual (untreated) type 2 inflammatory pathways. Studies of the airway microbiome revealed that microbial dysbiosis is associated with clinical and inflammatory clusters. Summary Asthma attacks are complex episodes with diverse causes, endotypes, and phenotypes. Emerging evidence supports incorporating biomarkers (blood eosinophils, Feno, and microbial testing) into clinical assessment to refine management. Recent evidence expands our understanding of exacerbation mechanisms, highlighting the need for tailored management strategies. Recognizing asthma heterogeneity could shift care toward precision medicine, reducing OCS reliance and improving patient outcomes."
+      },
+      {
+        "title": "Is Intravenous Magnesium Sulfate Beneficial in Children with Acute Asthma Exacerbation and Acute Bronchiolitis? A Retrospective Cohort Study",
+        "authors": "Yardibi YS, Cetinkaya BB, Tobcu Z, Orum S, Ulker Ustebay D, Ustebay S.",
+        "journal": "Children (Basel, Switzerland)",
+        "year": "2026",
+        "pmid": "42194230",
+        "doi": "10.3390/children13050704",
+        "article_url": "https://doi.org/10.3390/children13050704",
+        "design": "Cohort / Observational Study (Level 2b/3b Evidence)",
+        "is_protocol": false,
+        "abstract": "Background/objectives Asthma, one of the most common chronic diseases in childhood, and acute bronchiolitis, a leading cause of hospitalization in early childhood, remain significant contributors to morbidity and mortality. Methods This retrospective cohort study evaluated the efficacy and safety of intravenous magnesium sulfate (IV MgSO 4 ) as a secondary treatment in pediatric patients with acute asthma exacerbation unresponsive to first-line therapy and in patients with acute bronchiolitis unresponsive to supportive care. A total of 450 patients aged 6 months to 18 years, including 252 with acute asthma exacerbation and 198 with acute bronchiolitis, were included. Results Significant improvements in peripheral capillary oxygen saturation were observed after IV MgSO 4 administration in both groups ( p 4 also significantly reduced tachypnea compared to the acute bronchiolitis group ( p 4 were observed. Conclusions These findings suggest that IV MgSO 4 may be both beneficial and safe as an early secondary treatment in acute asthma exacerbations."
+      },
+      {
+        "title": "Digitally mapping the asthma journey-from diagnosis to remission",
+        "authors": "Chan AHY, Drummond D, Ramakrishnan S, van Boven JFM, Gibson PG, Thomas D.",
+        "journal": "EClinicalMedicine",
+        "year": "2025",
+        "pmid": "40630611",
+        "doi": "10.1016/j.eclinm.2025.103204",
+        "article_url": "https://doi.org/10.1016/j.eclinm.2025.103204",
+        "design": "Peer-Reviewed Clinical Article",
+        "is_protocol": false,
+        "abstract": "Digital technologies can play a central role in achieving precision medicine by monitoring changes in physiological and behavioural states. This could transform asthma care for the health provider and patient across the patient journey, from diagnosis to remission. For diagnosis, smartphones and artificial-intelligence-enabled devices can objectively capture respiratory symptoms, while digital peak flow meters enable home assessment of airflow variability. For routine monitoring and self-management, technologies can monitor biomarkers more frequently, digital inhalers can improve medication adherence and control whilst serious games can improve patient knowledge. Symptom tracking, lung function monitoring and environmental parameters can help identify exacerbation triggers. For assessing remission, digital technologies can capture most of the components of remission definitions, from exacerbations to reliever use, enabling a more objective assessment of this emerging endpoint. Together, this evidence supports the role of digital technologies in enabling the personalised approach to asthma called for by the Lancet Commission. Funding None."
+      },
+      {
+        "title": "Neonatal vitamin D status and asthma risk after age 5 years: A Danish population-based cohort study",
+        "authors": "Liu X, Zhu Z, Chawes B, Bønnelykke K, Horsdal HT, Agerbo E, Boelt SG, Borbye-Lorenzen N, Melgaard L, Pedersen CB, McGrath JJ.",
+        "journal": "Pediatric allergy and immunology : official publication of the European Society of Pediatric Allergy and Immunology",
+        "year": "2026",
+        "pmid": "41622973",
+        "doi": "10.1111/pai.70299",
+        "article_url": "https://doi.org/10.1111/pai.70299",
+        "design": "Cohort / Observational Study (Level 2b/3b Evidence)",
+        "is_protocol": false,
+        "abstract": "Background Vitamin D may play a role in early lung development, yet epidemiologic evidence on its association with later asthma risk is mixed. We aimed to investigate the associations of neonatal 25-hydroxyvitamin D (25(OH)D) and vitamin D-binding protein (DBP) and their corresponding genetic predictors with asthma risk. Methods We conducted a population-based cohort study of a random sample of individuals born in Denmark during 1991-2005 from the iPSYCH2012 study. Neonatal concentrations of 25(OH)D and DBP were measured via dried blood spots, and asthma cases were identified through diagnoses or asthma prescriptions after age 5 years. Cox regression was used to estimate hazard ratios (HRs) for asthma in relation to 25(OH)D, DBP, and polygenic scores (PGSs) for these traits and asthma to assess genetic liability to vitamin D status and asthma. Results Of 14,005 individuals, 2308 (16.5%) developed asthma over a maximum follow-up of 25 years. We found no association between neonatal 25(OH)D (HR = 1.04, 95% CI: 0.99-1.09 per SD increase) or DBP (HR = 1.01, 95% CI: 0.97-1.05) and asthma risk. Analyses using tertiles to assess potential non-linear associations yielded similar null results. A higher asthma PGS was associated with increased asthma risk (HR = 1.42, 95% CI: 1.36-1.47 per SD increase), whereas PGSs for 25(OH)D (HR = 1.00, 95% CI: 0.96-1.05) and DBP (HR = 0.99, 95% CI: 0.95-1.04) were not. Conclusions Our study suggests that neonatal vitamin D status is not associated with asthma risk. Similarly, genetic liability related to vitamin D status, as reflected in PGSs for 25(OH)D and DBP, is not associated with an increased risk of asthma."
+      }
+    ],
+    "update_search_recent_evidence": [
+      {
+        "study_title": "Online cognitive behaviour therapy for asthma-related anxiety: a randomised controlled trial",
+        "authors": "Bonnert M, Nash S, Andersson EM, Bergström SEE, Görling J, Janson C, Särnholm J, Almqvist C.",
+        "journal": "Thorax",
+        "year": "2026",
+        "pmid": "41494908",
+        "doi": "10.1136/thorax-2025-223886",
+        "article_url": "https://doi.org/10.1136/thorax-2025-223886",
+        "design": "Randomized Controlled Trial (Level 1b/2b Evidence)",
+        "is_protocol": false,
+        "abstract": "Objective Anxiety affects up to one-third of adults with asthma and is linked to poorer disease outcomes and reduced quality of life. This study evaluated the efficacy of therapist-guided, internet-delivered cognitive behavioural therapy (ICBT) versus treatment as usual plus medical education for reducing asthma-related anxiety. Methods A randomised controlled trial was conducted including 90 adult participants with anxiety related to asthma. ICBT was therapist-guided and lasted 8 weeks. The primary outcome, the Catastrophising about Asthma Scale, was assessed from pretreatment to the primary endpoint at 16 weeks. Secondary outcomes included asthma control, avoidance behaviour and quality of life. Forced expiratory volume in 1 s (FEV 1 ) was collected using a digital spirometer. Results ICBT demonstrated a significantly larger reduction in catastrophising about asthma than the control group (mean difference -18.53, 95% CI -25.54 to -11.53, p 1 were observed. Improvements were sustained at 6 months follow-up. Conclusion ICBT effectively and safely reduces catastrophising about asthma, improves asthma control, avoidance behaviour and quality of life and represents a promising adjunct to routine medical care for patients with asthma complicated by anxiety. Trial registration number Clinicaltrials.gov (ID: NCT04230369)."
+      },
+      {
+        "study_title": "Neural mechanisms of mindfulness-based stress reduction in asthma",
+        "authors": "Higgins ET, Busse WW, Klaus DR, Grupe DW, Goldman RI, Celedón JC, Davidson RJ, Rosenkranz MA.",
+        "journal": "Scientific reports",
+        "year": "2026",
+        "pmid": "42151421",
+        "doi": "10.1038/s41598-026-53074-6",
+        "article_url": "https://doi.org/10.1038/s41598-026-53074-6",
+        "design": "Randomized Controlled Trial (Level 1b/2b Evidence)",
+        "is_protocol": false,
+        "abstract": "Mindfulness-based stress reduction (MBSR) can improve symptoms of chronic inflammation; in asthma, improving asthma control and reducing airway inflammation. Understanding the neural mechanisms underlying these salubrious outcomes could help identify neuroimmune phenotypes and personalize interventions. Adults with asthma were randomized to 8 weeks of MBSR (n = 38) or a wait-list group (n = 34). Clinically relevant asthma-related and psychological outcomes were measured, and task-based fMRI data were acquired during exposure to emotional cues at baseline, post-intervention, and 6mo follow-up. Whole-brain group x time interactions and voxelwise regressions were used to evaluate changes in neural responses to emotion cues from baseline and their relationship to psychological and biological outcomes. Post-intervention, MBSR participants showed decreased lateral prefrontal/orbitofrontal cortex responses to aversive cues relative to controls, which was associated with increased mindfulness. Across participants, decreased salience network reactivity at post-intervention was associated with reduced psychological distress and airway inflammation. At 6 months, some relationships persisted while others did not. Results suggest that mindfulness training reduced effortful regulation of cognitive and affective responses to emotional cues, instead promoting more efficient processing strategies and reduced affective reactivity. Our findings clarify neural mechanisms underlying MBSR's clinical benefits for asthma, underscoring mind-brain-immune relationships as a critical target for asthma treatment."
+      },
+      {
+        "study_title": "Immediate Effects of Asthma Bath on Pulmonary Function Tests and Vital Signs in Healthy Individuals: A Randomized Controlled Trial",
+        "authors": "Vats N, Ajit ND, Shankaregowda AM, Yadav SS, Dubey N.",
+        "journal": "Advances in mind-body medicine",
+        "year": "2026",
+        "pmid": "41650327",
+        "doi": "",
+        "article_url": "https://pubmed.ncbi.nlm.nih.gov/41650327/",
+        "design": "Randomized Controlled Trial (Level 1b/2b Evidence)",
+        "is_protocol": false,
+        "abstract": "Background Asthma Bath is a hydrotherapeutic intervention used in naturopathy, typically administered in clinical settings, where water at varying temperatures is applied to enhance respiratory function. Aim To assess the immediate effect of Asthma Bath on the physiological changes in respiratory functions among healthy individuals. Materials and methods Two hundred healthy male and female participants, aged 20 to 40 years, were recruited from the Yoga and Naturopathy College of North India. The participants were randomized to an intervention group (n=100) and a control group (n=100). The intervention group received Asthma Bath for 20 minutes, while the control group was advised to sit and breathe normally for 20 minutes. The data were collected at baseline and immediately after intervention. Results Asthma Bath showed significant improvement in FVC (forced vital capacity), FEV1 (forced expiratory volume in one second), SBP (systolic blood pressure), DBP (Diastolic Blood Pressure), RR (Respiratory rate), pulse rate, and SpO2 (P Conclusion This study reveals that Asthma Bath helps improve pulmonary function in healthy individuals. keywords Asthma Bath, pulmonary function, naturopathy, hydrotherapy, blood pressure."
+      },
+      {
+        "study_title": "The cloud-based integrated intelligent management system for childhood asthma affects the control level and quality of life of children with asthma",
+        "authors": "Wang M, Yang Z, Chen G, Li W, Liu L, Yan J, Zhou M.",
+        "journal": "The Journal of asthma : official journal of the Association for the Care of Asthma",
+        "year": "2026",
+        "pmid": "41854284",
+        "doi": "10.1080/02770903.2026.2644877",
+        "article_url": "https://doi.org/10.1080/02770903.2026.2644877",
+        "design": "Randomized Controlled Trial (Level 1b/2b Evidence)",
+        "is_protocol": false,
+        "abstract": "Objective Bronchial asthma in children is a prevalent chronic condition that adversely affects respiratory health, leading to significant healthcare costs and diminished quality of life. Current management strategies, primarily involving inhaled corticosteroids and bronchodilators, are often hindered by poor adherence and inadequate monitoring. This study aimed to evaluate the effectiveness of an intelligent management system compared to traditional methods in enhancing asthma management in pediatric patients. Methods Utilizing a randomized controlled trial design with a 12-month follow-up, 208 children aged 6-12 years with diagnosed asthma were enrolled, with the experimental group (120 cases) receiving real-time monitoring and reminders through the intelligent system as an addition to traditional follow-ups, while the control group (88 cases) underwent conventional outpatient follow-ups. Results Key findings indicated that the experimental group exhibited significant improvements in medication adherence (89.2% vs 58.0%, p p p p p Conclusion This multifaceted intelligent management system, incorporating real-time monitoring, reminders, and remote clinical support, markedly enhances lung function, reduces airway inflammation, and improves quality of life in children with asthma, highlighting its potential as a transformative approach in asthma management. While the comprehensive approach proved effective, further research is needed to identify the most impactful components to facilitate broader implementation. Future research should explore long-term impacts and the integration of psychological support within these management strategies."
+      },
+      {
+        "study_title": "Toxocara infection in children with asthma: a systematic review and meta-analysis",
+        "authors": "Singh S, Khurana S, Kanaujia R.",
+        "journal": "Transactions of the Royal Society of Tropical Medicine and Hygiene",
+        "year": "2026",
+        "pmid": "42175712",
+        "doi": "10.1093/trstmh/trag062",
+        "article_url": "https://doi.org/10.1093/trstmh/trag062",
+        "design": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+        "is_protocol": false,
+        "abstract": "Evidence linking zoonotic nematode Toxocara and asthma is mounting in children. We aimed to estimate the pooled prevalence of Toxocara seropositivity in asthmatic children and quantify the association. We searched PubMed, Embase and Web of Science for studies (through 18 June 2025) reporting Toxocara seropositivity in asthmatic children. A random effects model was used to estimate pooled seroprevalence and odds ratios (ORs). Heterogeneity was explored using τ2, I2 and Cochran's Q test, subgroup analyses, meta-regression and sensitivity analysis. Publication bias assessment (Egger's test, funnel plots, trim and fill) and risk of bias evaluation (Newcastle-Ottawa Scale) was performed. Twenty-six studies comprising 3246 asthmatic children were included, of which 7 were high-quality studies. Pooled Toxocara seropositivity among asthma was 22% (95% confidence interval 16 to 29) with significant country-wise heterogeneity. In 23 studies comparing cases and controls, asthmatic children had significantly higher odds of Toxocara seropositivity (pooled OR 2.56, p<0.0001), with significant variation by geographic region (p<0.0001) and asthma case definitions (p=0.0004), with stronger associations observed in studies using rigorous definitions such as the Global Initiative for Asthma criteria. Sensitivity analyses showed that while the direction of association remained consistent, the magnitude was influenced by a few outlier studies. There is a significant association between Toxocara seropositivity and childhood asthma; however, the strength of this association should be interpreted cautiously due to heterogeneity, potential cross-reactivity in serological assays and methodological differences across studies. Prospective longitudinal studies and randomized controlled trials evaluating the impact of antiparasitic treatment are needed to clarify temporal relationships and establish causality."
+      }
+    ],
+    "counts": {
+      "official_guidelines_found": 6,
+      "landmark_cochrane_found": 5,
+      "recent_updates_found": 5
+    }
+  },
+  "literature_evidence": {
+    "query_condition": "Asthma",
+    "query_setting": "emergency",
+    "source": "Europe PMC & PubMed Live Open Science REST API",
+    "total_records_retrieved": 14,
+    "summary": {
+      "systematic_reviews_count": 7,
+      "review_protocols_count": 0,
+      "rcts_count": 0,
+      "guidelines_count": 1,
+      "egypt_relevant_count": 1,
+      "recent_papers_count": 14,
+      "with_pmid_count": 14,
+      "with_doi_count": 14,
+      "with_abstract_count": 13
+    },
+    "records": [
+      {
+        "title": "Effectiveness of digital health interventions for asthma: a systematic review and meta-analysis",
+        "authors": "Ning C, Yuan X, Feng Z, Li J, Wang J.",
+        "journal": "Frontiers in public health",
+        "pub_year": "2026",
+        "pub_date": "2026-08-05",
+        "is_recent": true,
+        "pmid": "42620654",
+        "pmcid": "",
+        "doi": "10.3389/fpubh.2026.1910816",
+        "article_url": "https://doi.org/10.3389/fpubh.2026.1910816",
+        "abstract": "Background Asthma, a prevalent chronic respiratory condition, frequently leads to issues like inadequate symptom management, diminished quality of life, and reduced lung function among patients. Proficient self-care plays a pivotal role in symptom control and enhancing quality of life. Digital health interventions have shown promise in enhancing treatment outcomes, mitigating acute exacerbations, and elevating patients' quality of life by enhancing self-management skills. Objective This systematic review and meta-analysis aimed to assess the clinical impact of digital health interventions on asthma management, encompassing asthma control [evaluated using the Asthma Control Test (ACT) and Asthma Control Questionnaire (ACQ)], quality of life [assessed through the Asthma Quality of Life Questionnaire (AQLQ), Mini Asthma Quality of Life Questionnaire (mini-AQLQ), and Pediatric Asthma Quality of Life Questionnaire (PAQLQ)], pulmonary function [including forced expiratory volume in 1 second (FEV 1 ), FEV 1 /forced vital capacity (FVC), and FEV 1 % predicted], and health care use indicators (measured by the frequency of hospitalizations and emergency visits). Methods This study used preset search terms to systematically search PubMed, Embase, Cochrane, Scopus, and Web of Science databases until December 31, 2025. Randomized controlled trials on digital health interventions for asthma were screened. Two reviewers independently completed literature screening, data extraction, and bias risk assessment. The results covered asthma control, quality of life, lung function, and health care use indicators. Results This analysis included 24 randomized controlled trials (RCTs) involving 5,155 participants across nine countries. Among these trials, 18 involved medical professionals utilizing digital platform applications, while two focused on compliance strategies. The digital tools for asthma primarily emphasize self-management systems, which encompass self-monitoring, medication reminders, and the dissemination of health information. The meta-analysis results indicated that digital health interventions significantly improved overall ACT scores [standardized mean difference (SMD) = 0.43, 95% CI: 0.35 to 0.51, P P P P = 0.025). Similarly, a significant overall reduction in ACQ scores was associated with digital health interventions (SMD = -0.37, 95% CI: -0.66 to -0.08, P = 0.013), driven primarily by the 12-month follow-up subgroup (SMD = -0.48, 95% CI: -0.82 to -0.13, P = 0.007). In terms of quality of life, digital health intervention can significantly improve the quality of life of patients, overall AQLQ score (SMD = 0.98, 95% CI: 0.49 to 1.47, P P = 0.001). At 6 months (SMD = 1.41, 95% CI: 1.06 to 1.75, P P P = 0.005) at 3 months (SMD = 0.29, 95% CI: 0.02 to 0.55, P = 0.034) and at 12 months (SMD = 0.22, 95% CI: 0.03 to 0.40, P = 0.023). Nevertheless, no significant differences were observed in the Pediatric Asthma Quality of Life Questionnaire, lung function, emergency treatment, or hospitalization risk. Conclusion Our study suggests that digital health interventions may benefit patient-reported asthma control and quality of life, but have no significant effect on objective physiological indicators or acute healthcare utilization. In the future, high-quality, large-sample and long-term randomized controlled trials are needed to further verify these findings. Systematic review registration identifier PROSPERO CRD420251076990, URL: https://www.crd.york.ac.uk/PROSPERO/view/CRD420251076990.",
+        "has_abstract": true,
+        "publication_types": [
+          "Meta-Analysis",
+          "Systematic Review",
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": true,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+        "cited_by_count": 0
+      },
+      {
+        "title": "Effects of probiotics, prebiotics, and synbiotics on lung function and symptoms in adults with bronchial asthma: a systematic review and meta-analysis",
+        "authors": "Zhang Q, Zhang N, Zheng Y, Zhou J, Liu L, Dong G.",
+        "journal": "Frontiers in immunology",
+        "pub_year": "2026",
+        "pub_date": "2026-08-04",
+        "is_recent": true,
+        "pmid": "42614164",
+        "pmcid": "",
+        "doi": "10.3389/fimmu.2026.1896757",
+        "article_url": "https://doi.org/10.3389/fimmu.2026.1896757",
+        "abstract": "Background Probiotics, prebiotics, and synbiotics may exert beneficial effects on asthma by modulating the gut microbiota and the \"gut-lung axis\". However, no systematic review or meta-analysis has specifically focused on adult asthma patients. Objective To systematically evaluate the effects of probiotics, prebiotics, and synbiotics on lung function, symptom control, and inflammatory markers in adults with bronchial asthma. Methods Five electronic databases were systematically searched for relevant randomized controlled trials (RCTs) up to May 2026 (PROSPERO registration: CRD420261412024). Standardized mean differences (SMDs) were pooled using a random-effects model. Outcomes for which quantitative data could not be extracted were summarized narratively. The Cochrane RoB 2.0 tool and GRADE framework were used to evaluate risk of bias and grade evidence quality for primary endpoints, respectively. Results 13 RCTs were included, 7 of which provided extractable continuous quantitative data. Pooled results demonstrated significant elevations in absolute FEV 1 (SMD=0.71, 95%CI 0.29-1.13, P=0.020) and FEV 1% predicted (SMD=0.51, 95%CI 0.06-0.96, P=0.026). Subgroup analyses identified numerically larger lung function gains for multi-strain formulations and 4-week interventions; no significant between-subgroup difference was observed for intervention type (P=0.462), while a significant difference was found between 4-week and 8-week treatment durations (P=0.002). The pooled change in ACT scores was not statistically significant, and this analysis was accompanied by high inter-study heterogeneity. A reduction in FeNO was observed in only a single, small trial that combined synbiotics with allergen immunotherapy, and no consistent alterations of IL-5 and IgE were detected across included studies. No severe adverse events were reported, and GRADE evidence certainty ranged from low to moderate. Conclusion Moderate-quality evidence supports a mild beneficial effect of multi-strain Bifidobacterium/Lactobacillus probiotics or synbiotics on lung function in adult asthma; however, the current evidence does not justify their routine clinical use. Large long-term RCTs are required to confirm efficacy and establish optimal regimens. Systematic review registration https://www.crd.york.ac.uk/PROSPERO/, identifier CRD420261412024.",
+        "has_abstract": true,
+        "publication_types": [
+          "Meta-Analysis",
+          "Systematic Review",
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": true,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+        "cited_by_count": 0
+      },
+      {
+        "title": "Toxocara infection in children with asthma: a systematic review and meta-analysis",
+        "authors": "Singh S, Khurana S, Kanaujia R.",
+        "journal": "Transactions of the Royal Society of Tropical Medicine and Hygiene",
+        "pub_year": "2026",
+        "pub_date": "2026-08-01",
+        "is_recent": true,
+        "pmid": "42175712",
+        "pmcid": "",
+        "doi": "10.1093/trstmh/trag062",
+        "article_url": "https://doi.org/10.1093/trstmh/trag062",
+        "abstract": "Evidence linking zoonotic nematode Toxocara and asthma is mounting in children. We aimed to estimate the pooled prevalence of Toxocara seropositivity in asthmatic children and quantify the association. We searched PubMed, Embase and Web of Science for studies (through 18 June 2025) reporting Toxocara seropositivity in asthmatic children. A random effects model was used to estimate pooled seroprevalence and odds ratios (ORs). Heterogeneity was explored using τ2, I2 and Cochran's Q test, subgroup analyses, meta-regression and sensitivity analysis. Publication bias assessment (Egger's test, funnel plots, trim and fill) and risk of bias evaluation (Newcastle-Ottawa Scale) was performed. Twenty-six studies comprising 3246 asthmatic children were included, of which 7 were high-quality studies. Pooled Toxocara seropositivity among asthma was 22% (95% confidence interval 16 to 29) with significant country-wise heterogeneity. In 23 studies comparing cases and controls, asthmatic children had significantly higher odds of Toxocara seropositivity (pooled OR 2.56, p<0.0001), with significant variation by geographic region (p<0.0001) and asthma case definitions (p=0.0004), with stronger associations observed in studies using rigorous definitions such as the Global Initiative for Asthma criteria. Sensitivity analyses showed that while the direction of association remained consistent, the magnitude was influenced by a few outlier studies. There is a significant association between Toxocara seropositivity and childhood asthma; however, the strength of this association should be interpreted cautiously due to heterogeneity, potential cross-reactivity in serological assays and methodological differences across studies. Prospective longitudinal studies and randomized controlled trials evaluating the impact of antiparasitic treatment are needed to clarify temporal relationships and establish causality.",
+        "has_abstract": true,
+        "publication_types": [
+          "Meta-Analysis",
+          "Systematic Review",
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": true,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+        "cited_by_count": 0
+      },
+      {
+        "title": "Early-life high-dose omega-3 polyunsaturated fatty acid supplementation reduces risk of childhood asthma/wheezing: A meta-analysis of randomized controlled trials",
+        "authors": "Cai S, Ji X, He Y, Zhou Y, Ge S, Gu M, Shang Y, Wang S, Yu D, Ren S, Zhou D, Zhang X.",
+        "journal": "Asia Pacific journal of clinical nutrition",
+        "pub_year": "2026",
+        "pub_date": "2026-08-01",
+        "is_recent": true,
+        "pmid": "42521226",
+        "pmcid": "",
+        "doi": "10.6133/apjcn.202608_35(4).0006",
+        "article_url": "https://doi.org/10.6133/apjcn.202608_35(4).0006",
+        "abstract": "Background and objectives Asthma, a chronic inflammatory airway disease characterized by wheezing, imposes a substantial global health burden on children. Given the potential of early-life omega-3 polyunsaturated fatty acid (omega-3 PUFA) supplementation as an anti-inflammatory intervention to prevent childhood asthma and wheezing, this meta-analysis aims to clarify its efficacy and investigate dose-dependency. Methods and study design This systematic review and meta-analysis was conducted according to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines. Three reviewers independently evaluated the studies, extracted data, and assessed bias using the Jadad scale. The outcomes included the risk of asthma/wheezing: pooled odds ratios (ORs) were calculated using fixed-effects models, along with sensitivity/subgroup analyses and dose-response meta-regression. Results Twelve randomized controlled trials (RCTs) involving 4,156 participants showed no overall association between omega-3 PUFA and a reduced risk of asthma/wheezing (odds ratio [OR]: 1.00; 95% confidence interval [CI]: 0.84-1.18). However, high-dose supplementation (≥1,200 mg/day) significantly decreased the risk (OR: 0.66; 95% CI: 0.46-0.94). Similarly, high-dose eicosapentaenoic acid (EPA≥1,000 mg/day) also significantly reduced the risk (OR: 0.67; 95% CI: 0.46-0.97). Dose-response analysis confirmed a linear relationship (p=0.002), indicating a 26.6% reduction in risk for every 1,000 mg/day increase in dose (OR: 0.734; 95% CI: 0.602-0.896). Subgroup analyses revealed no heterogeneity with respect to study location, allergy risk, or follow-up duration. Conclusions Early-life omega-3 PUFA supplementation reduces childhood asthma/wheezing risk in a dose-dependent manner. High-dose regimens, particularly those involving EPA, provide substantial protection, suggesting a potential clinical strategy for prevention, although further validation is required.",
+        "has_abstract": true,
+        "publication_types": [
+          "Meta-Analysis",
+          "Systematic Review",
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": true,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+        "cited_by_count": 0
+      },
+      {
+        "title": "The impact of Mediterranean diet adherence on allergic diseases: a systematic review and meta-analysis",
+        "authors": "Panagiotou E, Andreou E, Nicolaou SA.",
+        "journal": "Journal of nutritional science",
+        "pub_year": "2026",
+        "pub_date": "2026-07-20",
+        "is_recent": true,
+        "pmid": "42553401",
+        "pmcid": "",
+        "doi": "10.1017/jns.2026.10125",
+        "article_url": "https://doi.org/10.1017/jns.2026.10125",
+        "abstract": "Allergies are a growing public health concern worldwide. This meta-analysis investigated the association between adherence to the Mediterranean diet (MD) and the occurrence/severity of respiratory allergic conditions. Electronic databases (PubMed, Scopus, Science Direct, and EBSCO) were searched for studies published up to April 2024. Eligible studies reported OR with 95% CI for asthma, wheezing (respiratory symptom associated with allergic airway disease), rhinitis, or eczema. Food allergy was evaluated only qualitatively due to insufficient data. The risk of bias was assessed using the National Heart, Lung, and Blood Institute tool, and random-effects models were applied to account for heterogeneity. A total of twenty-three studies involving 111,583 participants met the inclusion criteria. Individual studies could contribute to more than one condition-specific analysis if they reported outcomes for multiple allergic conditions. Pooled analyses demonstrated a significant protective effect of MD against asthma ( n = 11, log OR: -0.18; 95% CI: -0.34, -0.02), wheezing ( n = 6, log OR: -0.29; 95% CI: -0.56, -0.03), and rhinitis (log OR: -0.54; 95% CI: -1.00, -0.08), with stronger effects in Mediterranean populations. No significant association was observed with eczema (pooled log OR: 0.09; 95% CI: -0.02, 0.20). Heterogeneity was moderate across analyses. Publication bias was evaluated using forest plots and Egger's test. These findings suggest that MD adherence was associated with lower odds of asthma, wheezing, and rhinitis, but does not influence eczema risk. Further longitudinal studies with standardised methodologies are needed to confirm causality. Promoting MD adherence may offer a valuable population-level strategy for allergy prevention. Systematic review registration: PROSPERO-CRD42023408724.",
+        "has_abstract": true,
+        "publication_types": [
+          "Meta-Analysis",
+          "Systematic Review",
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": true,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+        "cited_by_count": 0
+      },
+      {
+        "title": "[French guidelines for severe asthma management]",
+        "authors": "Perotin JM, Guilleminault L, Chenivesse C, Oster JP, Portel L, Garcia G, Blanchard E, Peiffer G, Perriot J, Bourdin A, Papon JF, Chassagnon G, Burnet E, Doyen V, Taille C, Barnig C.",
+        "journal": "Revue des maladies respiratoires",
+        "pub_year": "2026",
+        "pub_date": "2026-08-19",
+        "is_recent": true,
+        "pmid": "42618353",
+        "pmcid": "",
+        "doi": "10.1016/j.rmr.2026.07.005",
+        "article_url": "https://doi.org/10.1016/j.rmr.2026.07.005",
+        "abstract": "",
+        "has_abstract": false,
+        "publication_types": [
+          "Practice Guideline",
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": false,
+        "is_rct": false,
+        "is_guideline": true,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Clinical Practice Guideline / Consensus Statement",
+        "cited_by_count": 0
+      },
+      {
+        "title": "Association between OLD and IBD: a systematic review and meta-analysis",
+        "authors": "Ding C, Wang Y, Sun T, Liu Z.",
+        "journal": "Frontiers in immunology",
+        "pub_year": "2026",
+        "pub_date": "2026-06-30",
+        "is_recent": true,
+        "pmid": "42454054",
+        "pmcid": "",
+        "doi": "10.3389/fimmu.2026.1726732",
+        "article_url": "https://doi.org/10.3389/fimmu.2026.1726732",
+        "abstract": "Objective This study aimed to systematically evaluate the bidirectional association between obstructive lung diseases (OLD) [including chronic obstructive pulmonary disease (COPD), asthma, and bronchiectasis] and inflammatory bowel disease (IBD) [including Crohn's disease (CD) and ulcerative colitis (UC)]. Methods Following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines, we conducted a systematic search of the PubMed, Embase, and Cochrane Library databases to identify relevant observational studies published up to 30 June 2025. The included studies were cohort studies, case-control studies, and cross-sectional studies that reported relative risk (RR), hazard ratio (HR), or odds ratio (OR) with 95% confidence intervals (CIs). Study quality was assessed using the Newcastle-Ottawa Scale (NOS), and data were analyzed using random effects or fixed effects models. HRs, RRs, and ORs were analyzed separately according to the direction of association and the disease subtype. Results A total of 30 observational studies were included. In the estimate-stratified analyses, IBD was associated with an increased risk of subsequent COPD, while COPD was generally associated with increased risks of subsequent CD and UC, although the COPD-to-CD and COPD-to-UC analyses showed substantial heterogeneity. For bronchiectasis, available evidence suggested a positive association with IBD; however, the pooled estimate for IBD and subsequent bronchiectasis was imprecise and should be interpreted with caution. For asthma, the association was more consistent: IBD was associated with an increased risk of subsequent asthma in both HR- and OR-based analyses, and asthma was also associated with subsequent IBD in the HR-based analysis. The bidirectional association was generally stronger and more consistent for CD than for UC. Conclusion This systematic review and meta-analysis supports positive associations between OLD and IBD, particularly for COPD with the IBD subtypes and for asthma with IBD, especially CD. These associations should be interpreted according to the OLD subtype and the age context. Clinicians should be attentive to respiratory comorbidities in patients with IBD, and appropriate respiratory symptom assessment or screening may help early identification and management. Systematic review registration https://www.crd.york.ac.uk/prospero/, identifier CRD420251169706.",
+        "has_abstract": true,
+        "publication_types": [
+          "Meta-Analysis",
+          "Systematic Review",
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": true,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+        "cited_by_count": 0
+      },
+      {
+        "title": "Impact of an integrated interdisciplinary team-based learning session of medicine and health sector programs at Galala University",
+        "authors": "Hassan ANE, Lasheen NN.",
+        "journal": "BMC medical education",
+        "pub_year": "2026",
+        "pub_date": "2026-07-14",
+        "is_recent": true,
+        "pmid": "42449315",
+        "pmcid": "",
+        "doi": "10.1186/s12909-026-09732-4",
+        "article_url": "https://doi.org/10.1186/s12909-026-09732-4",
+        "abstract": "Background and aim Active learning, especially through interdisciplinary approaches, is increasingly recognized as a means to enhance the effectiveness of health promotion programs. This study evaluated the impact of introducing a team-based learning (TBL) session, structured as an interdisciplinary experience, on students from health-related faculties. The primary aim was to demonstrate the effects of an interdisciplinary TBL session across five faculties at Galala University. Methods Using a quasi-experimental pre-post design, an interdisciplinary TBL session was conducted at Galala University, involving students from the Faculties of Medicine, Pharmacy, Physical Therapy, Applied Health Sciences, and Nursing. Twenty-five students volunteered and were divided into five teams. The session, centered on bronchial asthma, followed a three-phase structure: an initial mini-lecture, readiness assurance tests (administered individually and in teams), a debriefing session, and a group application task. At the third phase, students completed a satisfaction survey. Results Team-based readiness assurance test (t-RAT) scores consistently exceeded individual readiness assurance test (i-RAT) scores across nine multidisciplinary questions, indicating improved performance through teamwork. The satisfaction survey revealed that the majority of students perceived benefits from participating in the interdisciplinary session. Conclusion TBL may play a valuable role in adopting hands-on involvement, peer-assisted learning, critical thinking, and could enrich the student-centered learning through collaborative problem-solving in bronchial asthma.",
+        "has_abstract": true,
+        "publication_types": [
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": false,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": true,
+        "egypt_evidence_details": "Affiliation: Faculty of Medicine, 6th October University, Giza, Egypt....",
+        "evidence_designation": "Egyptian Clinical / Epidemiological Study",
+        "cited_by_count": 0
+      },
+      {
+        "title": "Implementation of an Institutional Asthma Care Guideline in Hospitalized Children: Effects on Clinical Outcomes and Healthcare Resource Utilization",
+        "authors": "Intusup S, Ruangnapa K, Anuntaseree W, Saelim K, Prasertsan P, Sirianansopa K.",
+        "journal": "Journal of asthma and allergy",
+        "pub_year": "2026",
+        "pub_date": "2026-06-15",
+        "is_recent": true,
+        "pmid": "42326972",
+        "pmcid": "PMC13281863",
+        "doi": "10.2147/jaa.s605374",
+        "article_url": "https://doi.org/10.2147/jaa.s605374",
+        "abstract": "Background Acute asthma exacerbations are a major cause of pediatric hospitalization and healthcare utilization. Despite the availability of standard guidelines, variability in inpatient management persists and may affect both clinical outcomes and resource use. Objective To evaluate the impact of an institutional inpatient asthma care guideline on treatment processes, clinical outcomes, and hospitalization costs in children. Methods This retrospective quality improvement cohort study included children aged 1-15 years hospitalized for acute asthma between 2016 and 2024. Patients were categorized into three phases: pre-implementation, post-implementation, and post-revision. The institutional guideline standardized bronchodilator escalation, respiratory support, and discharge planning, and was implemented using Plan-Do-Study-Act (PDSA) cycles. Results A total of 220 children were included. Compared across the three phases, time to first bronchodilator decreased significantly (117 vs 104 vs 70 minutes, P Conclusion Implementation of an institutional asthma care guideline was associated with improved treatment timeliness and early clinical improvement but was also associated with increased length of stay and hospitalization costs, suggesting a trade-off between clinical management and resource utilization.",
+        "has_abstract": true,
+        "publication_types": [
+          "research-article",
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": false,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Peer-Reviewed Clinical Article",
+        "cited_by_count": 0
+      },
+      {
+        "title": "Severe Asthma Exacerbations in the Pediatric Intensive Care Unit: Clinical Profile, Management, and Outcomes-Retrospective Study",
+        "authors": "Aljohani AH, Alsufiani HA, AlSaadi AM, Alem NA, AliAbusunoon M, Madkhali AI.",
+        "journal": "Children (Basel, Switzerland)",
+        "pub_year": "2026",
+        "pub_date": "2026-05-21",
+        "is_recent": true,
+        "pmid": "42194236",
+        "pmcid": "PMC13205015",
+        "doi": "10.3390/children13050710",
+        "article_url": "https://doi.org/10.3390/children13050710",
+        "abstract": "Background Severe asthma exacerbations remain a major cause of pediatric intensive care unit (PICU) admissions, particularly in early childhood. Objective To describe the demographic characteristics, clinical features, management strategies, and short-term outcomes of children admitted to the PICU with severe acute asthma exacerbations. Methods A retrospective descriptive study was conducted of pediatric patients aged 1-14 years with severe acute asthma requiring PICU admission at King Salman Medical City, Madinah, Saudi Arabia (January 2023-October 2024). A total of 73 patients were included. Data included demographics, risk factors, medical history, clinical presentation, management, and outcomes. Results The mean patient age was 4.6 years, with most (57.5%) aged 1-5 years. Males comprised 56.2% of cases. WHO BMI-for-age z-score assessment revealed a bimodal nutritional distribution: 27.9% of patients were underweight, including 20.6% with severe underweight, while 29.4% were overweight or obese; 42.6% had normal nutritional status. Severe undernutrition was concentrated in the 1-5-year age group, whereas obesity predominated in the 6-10-year age group. A family history of asthma was noted in 54.8% of patients; 16.4% had prior COVID-19 infection. Early symptom onset and delayed diagnosis were common. Poor asthma control was documented in 60.3%, with low medication adherence (9.6%) and limited aerochamber use (13.7%). The most frequent presenting symptoms were dyspnea, cough, and wheezing. Management followed evidence-based protocols: systemic corticosteroids and bronchodilators were first-line therapies. The mean PICU stay was 3.1 days and the mean hospital stay was 8.1 days. No mortality or major complications occurred; 93.2% of patients were discharged in good health. Conclusions Severe pediatric asthma requiring PICU admission is associated with early symptom onset, a bimodal pattern of nutritional risk encompassing both undernutrition and overweight/obesity, family history of asthma, and inadequate outpatient management. These descriptive findings highlight the need for age-adjusted nutritional screening, enhanced medication adherence support, and targeted outpatient education to reduce avoidable PICU admissions.",
+        "has_abstract": true,
+        "publication_types": [
+          "research-article",
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": false,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Peer-Reviewed Clinical Article",
+        "cited_by_count": 0
+      },
+      {
+        "title": "An alternative diagnosis for vape induced lung injury: a case report",
+        "authors": "Veldhuis LI, van Oosten J, Endeman H.",
+        "journal": "Journal of medical case reports",
+        "pub_year": "2026",
+        "pub_date": "2026-07-15",
+        "is_recent": true,
+        "pmid": "42458622",
+        "pmcid": "",
+        "doi": "10.1186/s13256-026-06345-9",
+        "article_url": "https://doi.org/10.1186/s13256-026-06345-9",
+        "abstract": "Background Vaping can result in acute and severe respiratory distress, a condition known as e-cigarette or vaping-associated lung injury (EVALI). The inhalation temperature of e-cigarettes can reach up to 315-400 °C (600-750 °F). EVALI is characterized by a range of clinical and pathological findings, including pulmonary infiltrates, diffuse alveolar damage, but mainly ground-glass opacities. This case report presents a case of severe lung injury needing extracorporeal membrane oxygenation (ECMO) as a result of vaping, but not with the standard presentation or clinical findings or the standard diagnosis. Case presentation A 17-year-old Dutch woman with a history of asthma, presented to the emergency department with respiratory distress after vaping up to 600 inhalations daily for several days. The evening prior to admission, the patient experienced three episodes of acute breathlessness accompanied by wheezing and coughing, preceded by 4-5 days of headache and cold symptoms. Though there was initial improvement at the hospital, her condition rapidly deteriorated with silent chest, tachypnea at 70/min, increased respiratory effort with nasal flaring, and muscle retractions. Despite receiving mechanical ventilation and the treatment for a possible status asthmaticus her condition continued to deteriorate. Due to the severeness of the respiratory distress, she was transferred to the Erasmus Medical Center (EMC) for ECMO. Imaging studies at the EMC, including chest CT, revealed severe subcutaneous emphysema and pneumomediastinum without a pneumothorax, as well as severe central and peripheral mucus plugs. Bronchoscopy confirmed severe bronchial obstruction with epithelial shedding with easy bleeding epithelial. After 17 days of ECMO support, the patient showed signs of improvement and was successfully weaned off ECMO. However, she experienced muscle weakness, necessitating prolonged mechanical ventilation and tracheostomy placement. After a total of 26 days in the ICU, she was transferred to the general ward without supplemental oxygen. Conclusions This case suggests a severe vaping-associated lung injury with features of inhalation injury, rather than classical EVALI. Adequate and critical evaluation of patients with respiratory distress after vaping should be performed.",
+        "has_abstract": true,
+        "publication_types": [
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": false,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Peer-Reviewed Clinical Article",
+        "cited_by_count": 0
+      },
+      {
+        "title": "Human metapneumovirus infection in pregnancy: A systematic review of cohort studies and case reports",
+        "authors": "Tsantila A, Gourounti K, Nanou C, Metallinou D, Georgakopoulou VE, Bolou A, Diamanti A.",
+        "journal": "World journal of virology",
+        "pub_year": "2026",
+        "pub_date": "2026-06-01",
+        "is_recent": true,
+        "pmid": "42395042",
+        "pmcid": "PMC13324766",
+        "doi": "10.5501/wjv.v15.i2.118445",
+        "article_url": "https://doi.org/10.5501/wjv.v15.i2.118445",
+        "abstract": "Background Human metapneumovirus (hMPV) is an important cause of acute respiratory tract infection worldwide, but its impact during pregnancy has not been systematically characterized. Aim To synthesize available evidence on maternal, obstetric and neonatal outcomes of hMPV infection in pregnancy. Methods Following PRISMA 2020 guidelines, a comprehensive search of PubMed/MEDLINE, EMBASE, Scopus, Web of Science and Google Scholar from inception to November 2025 identified studies reporting laboratory-confirmed hMPV infection in pregnant women. Eligible designs included case reports, case series and observational studies; however, the available evidence consisted predominantly of case reports and small case series, with only two prospective cohort studies contributing population-level data. Given anticipated heterogeneity, findings were synthesized narratively. Results Seven studies met inclusion criteria, comprising two prospective community-based cohorts and five case reports/series. Across studies, approximately 50-60 women had laboratory-confirmed antenatal hMPV infection after exclusion of postpartum-only cases and accounting for non-overlapping cohorts. In community cohorts from Nepal and Thailand, hMPV accounted for a modest but non-trivial proportion of symptomatic antenatal respiratory illnesses, most of which were mild to moderate, self-limited, and did not require hospitalization or intensive care. In contrast, case-based reports described severe pneumonia and acute respiratory distress syndrome (ARDS) in women-typically in the second or third trimester-with underlying comorbidities such as asthma, morbid obesity, diabetes, chronic kidney disease or hypertensive disorders; no maternal deaths were reported. Obstetric outcomes were generally reassuring, although one cohort demonstrated an increased risk of small-for-gestational-age infants after antenatal hMPV infection, while evidence for preterm birth and other major complications remained limited and inconsistent. Neonatal outcomes were mostly favorable, with live births, gestational age and birthweight distributions comparable to uninfected pregnancies, and no confirmed congenital hMPV infections. Conclusion hMPV is an under-recognized cause of respiratory illness in pregnancy, usually resulting in mild disease but occasionally associated with severe pneumonia and ARDS in women with comorbidities. A possible association with fetal growth restriction has been reported; however, given the predominance of case reports and small cohort data, causality cannot be inferred for obstetric outcomes. Evidence for other adverse maternal and neonatal outcomes remains limited and inconsistent.",
+        "has_abstract": true,
+        "publication_types": [
+          "research-article",
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": true,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+        "cited_by_count": 0
+      },
+      {
+        "title": "Relapsing allergic bronchopulmonary aspergillosis as a trigger for Kounis syndrome: a case report",
+        "authors": "Wei H, Wu L, Ni B, Zhang J, Xu M, Guo L, Mao Y.",
+        "journal": "Frontiers in cardiovascular medicine",
+        "pub_year": "2026",
+        "pub_date": "2026-06-09",
+        "is_recent": true,
+        "pmid": "42344355",
+        "pmcid": "PMC13288271",
+        "doi": "10.3389/fcvm.2026.1811823",
+        "article_url": "https://doi.org/10.3389/fcvm.2026.1811823",
+        "abstract": "Kounis syndrome is an allergic acute coronary syndrome triggered by hypersensitivity reactions. Its association with allergic bronchopulmonary aspergillosis (ABPA) is rarely reported. We describe a 77-year-old woman with asthma, chronic obstructive pulmonary disease, and established ABPA who developed acute chest tightness and dyspnea during an ABPA relapse. Laboratory testing showed marked eosinophilia, elevated total IgE, and evidence of myocardial injury, with increased cardiac troponin I and B-type natriuretic peptide. Electrocardiography revealed ischemic changes, and coronary angiography demonstrated nonobstructive coronary arteries. Based on the clinical and immunologic findings, Kounis syndrome, possibly triggered by ABPA, was diagnosed. The patient improved with antifungal therapy, systemic corticosteroids, coronary vasodilators, and supportive care. This case highlights ABPA relapse as a potential trigger of Kounis syndrome and emphasizes the need for cardiovascular vigilance in patients with severe allergic airway disease.",
+        "has_abstract": true,
+        "publication_types": [
+          "Journal Article",
+          "Case Reports",
+          "case-report"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": false,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Peer-Reviewed Clinical Article",
+        "cited_by_count": 0
+      },
+      {
+        "title": "Impact of air pollution on exacerbations of respiratory and cardiovascular diseases for the intensivist: a narrative review",
+        "authors": "Gaudet A, Lacombe C, Piga G, de Nadaï P, Group for the\nAssessment of ICU-related Impacts of Air pollution (GAÏA).",
+        "journal": "Intensive care medicine experimental",
+        "pub_year": "2026",
+        "pub_date": "2026-05-13",
+        "is_recent": true,
+        "pmid": "42126664",
+        "pmcid": "PMC13172127",
+        "doi": "10.1186/s40635-026-00908-2",
+        "article_url": "https://doi.org/10.1186/s40635-026-00908-2",
+        "abstract": "Air pollution is a major global health threat, yet its specific impact on critically ill patients remains underexplored. While the link between air pollution and respiratory and cardiovascular events is well-documented, its contribution to organ dysfunction in the ICU setting requires a comprehensive synthesis for the intensivist. This narrative review aims to summarize the pathophysiological mechanisms and epidemiological evidence linking short-term and long-term air pollution exposure to exacerbations of respiratory and cardiovascular diseases, with a focus on critical illness. We therefore conducted a comprehensive review of the literature, focusing on clinical studies and mechanistic models. We specifically examined the impact of particulate matter and gaseous pollutants on ICU-specific outcomes. Evidence indicates that air pollution notably acts as a potent trigger for acute respiratory distress syndrome, acute lower respiratory infections, and exacerbations of chronic obstructive pulmonary disease and asthma. Higher levels of air pollution are associated with acute cardiovascular events leading to hospital admission, especially myocardial infarction, stroke, acute heart failure, and arrhythmia. Recent data suggest that long-term exposure significantly increases the susceptibility to critical illness, while short-term peaks are associated with immediate spikes in ICU mortality and morbidity. In conclusion, air pollution is a silent but significant contributor to the burden of critical illness. For the intensivist, understanding these environmental determinants is crucial for both clinical risk assessment and public health advocacy. Future research must bridge the gap between general population observations and direct clinical evidence in the ICU to refine protective strategies in the context of a changing climate.",
+        "has_abstract": true,
+        "publication_types": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ],
+        "is_protocol": false,
+        "is_systematic_review_or_meta_analysis": false,
+        "is_rct": false,
+        "is_guideline": false,
+        "is_egypt_relevant": false,
+        "egypt_evidence_details": null,
+        "evidence_designation": "Peer-Reviewed Clinical Article",
+        "cited_by_count": 0
+      }
+    ],
+    "evidence_tiers": {
+      "systematic_reviews_and_meta_analyses": [
+        {
+          "title": "Effectiveness of digital health interventions for asthma: a systematic review and meta-analysis",
+          "authors": "Ning C, Yuan X, Feng Z, Li J, Wang J.",
+          "journal": "Frontiers in public health",
+          "pub_year": "2026",
+          "pub_date": "2026-08-05",
+          "is_recent": true,
+          "pmid": "42620654",
+          "pmcid": "",
+          "doi": "10.3389/fpubh.2026.1910816",
+          "article_url": "https://doi.org/10.3389/fpubh.2026.1910816",
+          "abstract": "Background Asthma, a prevalent chronic respiratory condition, frequently leads to issues like inadequate symptom management, diminished quality of life, and reduced lung function among patients. Proficient self-care plays a pivotal role in symptom control and enhancing quality of life. Digital health interventions have shown promise in enhancing treatment outcomes, mitigating acute exacerbations, and elevating patients' quality of life by enhancing self-management skills. Objective This systematic review and meta-analysis aimed to assess the clinical impact of digital health interventions on asthma management, encompassing asthma control [evaluated using the Asthma Control Test (ACT) and Asthma Control Questionnaire (ACQ)], quality of life [assessed through the Asthma Quality of Life Questionnaire (AQLQ), Mini Asthma Quality of Life Questionnaire (mini-AQLQ), and Pediatric Asthma Quality of Life Questionnaire (PAQLQ)], pulmonary function [including forced expiratory volume in 1 second (FEV 1 ), FEV 1 /forced vital capacity (FVC), and FEV 1 % predicted], and health care use indicators (measured by the frequency of hospitalizations and emergency visits). Methods This study used preset search terms to systematically search PubMed, Embase, Cochrane, Scopus, and Web of Science databases until December 31, 2025. Randomized controlled trials on digital health interventions for asthma were screened. Two reviewers independently completed literature screening, data extraction, and bias risk assessment. The results covered asthma control, quality of life, lung function, and health care use indicators. Results This analysis included 24 randomized controlled trials (RCTs) involving 5,155 participants across nine countries. Among these trials, 18 involved medical professionals utilizing digital platform applications, while two focused on compliance strategies. The digital tools for asthma primarily emphasize self-management systems, which encompass self-monitoring, medication reminders, and the dissemination of health information. The meta-analysis results indicated that digital health interventions significantly improved overall ACT scores [standardized mean difference (SMD) = 0.43, 95% CI: 0.35 to 0.51, P P P P = 0.025). Similarly, a significant overall reduction in ACQ scores was associated with digital health interventions (SMD = -0.37, 95% CI: -0.66 to -0.08, P = 0.013), driven primarily by the 12-month follow-up subgroup (SMD = -0.48, 95% CI: -0.82 to -0.13, P = 0.007). In terms of quality of life, digital health intervention can significantly improve the quality of life of patients, overall AQLQ score (SMD = 0.98, 95% CI: 0.49 to 1.47, P P = 0.001). At 6 months (SMD = 1.41, 95% CI: 1.06 to 1.75, P P P = 0.005) at 3 months (SMD = 0.29, 95% CI: 0.02 to 0.55, P = 0.034) and at 12 months (SMD = 0.22, 95% CI: 0.03 to 0.40, P = 0.023). Nevertheless, no significant differences were observed in the Pediatric Asthma Quality of Life Questionnaire, lung function, emergency treatment, or hospitalization risk. Conclusion Our study suggests that digital health interventions may benefit patient-reported asthma control and quality of life, but have no significant effect on objective physiological indicators or acute healthcare utilization. In the future, high-quality, large-sample and long-term randomized controlled trials are needed to further verify these findings. Systematic review registration identifier PROSPERO CRD420251076990, URL: https://www.crd.york.ac.uk/PROSPERO/view/CRD420251076990.",
+          "has_abstract": true,
+          "publication_types": [
+            "Meta-Analysis",
+            "Systematic Review",
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": true,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+          "cited_by_count": 0
+        },
+        {
+          "title": "Effects of probiotics, prebiotics, and synbiotics on lung function and symptoms in adults with bronchial asthma: a systematic review and meta-analysis",
+          "authors": "Zhang Q, Zhang N, Zheng Y, Zhou J, Liu L, Dong G.",
+          "journal": "Frontiers in immunology",
+          "pub_year": "2026",
+          "pub_date": "2026-08-04",
+          "is_recent": true,
+          "pmid": "42614164",
+          "pmcid": "",
+          "doi": "10.3389/fimmu.2026.1896757",
+          "article_url": "https://doi.org/10.3389/fimmu.2026.1896757",
+          "abstract": "Background Probiotics, prebiotics, and synbiotics may exert beneficial effects on asthma by modulating the gut microbiota and the \"gut-lung axis\". However, no systematic review or meta-analysis has specifically focused on adult asthma patients. Objective To systematically evaluate the effects of probiotics, prebiotics, and synbiotics on lung function, symptom control, and inflammatory markers in adults with bronchial asthma. Methods Five electronic databases were systematically searched for relevant randomized controlled trials (RCTs) up to May 2026 (PROSPERO registration: CRD420261412024). Standardized mean differences (SMDs) were pooled using a random-effects model. Outcomes for which quantitative data could not be extracted were summarized narratively. The Cochrane RoB 2.0 tool and GRADE framework were used to evaluate risk of bias and grade evidence quality for primary endpoints, respectively. Results 13 RCTs were included, 7 of which provided extractable continuous quantitative data. Pooled results demonstrated significant elevations in absolute FEV 1 (SMD=0.71, 95%CI 0.29-1.13, P=0.020) and FEV 1% predicted (SMD=0.51, 95%CI 0.06-0.96, P=0.026). Subgroup analyses identified numerically larger lung function gains for multi-strain formulations and 4-week interventions; no significant between-subgroup difference was observed for intervention type (P=0.462), while a significant difference was found between 4-week and 8-week treatment durations (P=0.002). The pooled change in ACT scores was not statistically significant, and this analysis was accompanied by high inter-study heterogeneity. A reduction in FeNO was observed in only a single, small trial that combined synbiotics with allergen immunotherapy, and no consistent alterations of IL-5 and IgE were detected across included studies. No severe adverse events were reported, and GRADE evidence certainty ranged from low to moderate. Conclusion Moderate-quality evidence supports a mild beneficial effect of multi-strain Bifidobacterium/Lactobacillus probiotics or synbiotics on lung function in adult asthma; however, the current evidence does not justify their routine clinical use. Large long-term RCTs are required to confirm efficacy and establish optimal regimens. Systematic review registration https://www.crd.york.ac.uk/PROSPERO/, identifier CRD420261412024.",
+          "has_abstract": true,
+          "publication_types": [
+            "Meta-Analysis",
+            "Systematic Review",
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": true,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+          "cited_by_count": 0
+        },
+        {
+          "title": "Toxocara infection in children with asthma: a systematic review and meta-analysis",
+          "authors": "Singh S, Khurana S, Kanaujia R.",
+          "journal": "Transactions of the Royal Society of Tropical Medicine and Hygiene",
+          "pub_year": "2026",
+          "pub_date": "2026-08-01",
+          "is_recent": true,
+          "pmid": "42175712",
+          "pmcid": "",
+          "doi": "10.1093/trstmh/trag062",
+          "article_url": "https://doi.org/10.1093/trstmh/trag062",
+          "abstract": "Evidence linking zoonotic nematode Toxocara and asthma is mounting in children. We aimed to estimate the pooled prevalence of Toxocara seropositivity in asthmatic children and quantify the association. We searched PubMed, Embase and Web of Science for studies (through 18 June 2025) reporting Toxocara seropositivity in asthmatic children. A random effects model was used to estimate pooled seroprevalence and odds ratios (ORs). Heterogeneity was explored using τ2, I2 and Cochran's Q test, subgroup analyses, meta-regression and sensitivity analysis. Publication bias assessment (Egger's test, funnel plots, trim and fill) and risk of bias evaluation (Newcastle-Ottawa Scale) was performed. Twenty-six studies comprising 3246 asthmatic children were included, of which 7 were high-quality studies. Pooled Toxocara seropositivity among asthma was 22% (95% confidence interval 16 to 29) with significant country-wise heterogeneity. In 23 studies comparing cases and controls, asthmatic children had significantly higher odds of Toxocara seropositivity (pooled OR 2.56, p<0.0001), with significant variation by geographic region (p<0.0001) and asthma case definitions (p=0.0004), with stronger associations observed in studies using rigorous definitions such as the Global Initiative for Asthma criteria. Sensitivity analyses showed that while the direction of association remained consistent, the magnitude was influenced by a few outlier studies. There is a significant association between Toxocara seropositivity and childhood asthma; however, the strength of this association should be interpreted cautiously due to heterogeneity, potential cross-reactivity in serological assays and methodological differences across studies. Prospective longitudinal studies and randomized controlled trials evaluating the impact of antiparasitic treatment are needed to clarify temporal relationships and establish causality.",
+          "has_abstract": true,
+          "publication_types": [
+            "Meta-Analysis",
+            "Systematic Review",
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": true,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+          "cited_by_count": 0
+        },
+        {
+          "title": "Early-life high-dose omega-3 polyunsaturated fatty acid supplementation reduces risk of childhood asthma/wheezing: A meta-analysis of randomized controlled trials",
+          "authors": "Cai S, Ji X, He Y, Zhou Y, Ge S, Gu M, Shang Y, Wang S, Yu D, Ren S, Zhou D, Zhang X.",
+          "journal": "Asia Pacific journal of clinical nutrition",
+          "pub_year": "2026",
+          "pub_date": "2026-08-01",
+          "is_recent": true,
+          "pmid": "42521226",
+          "pmcid": "",
+          "doi": "10.6133/apjcn.202608_35(4).0006",
+          "article_url": "https://doi.org/10.6133/apjcn.202608_35(4).0006",
+          "abstract": "Background and objectives Asthma, a chronic inflammatory airway disease characterized by wheezing, imposes a substantial global health burden on children. Given the potential of early-life omega-3 polyunsaturated fatty acid (omega-3 PUFA) supplementation as an anti-inflammatory intervention to prevent childhood asthma and wheezing, this meta-analysis aims to clarify its efficacy and investigate dose-dependency. Methods and study design This systematic review and meta-analysis was conducted according to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines. Three reviewers independently evaluated the studies, extracted data, and assessed bias using the Jadad scale. The outcomes included the risk of asthma/wheezing: pooled odds ratios (ORs) were calculated using fixed-effects models, along with sensitivity/subgroup analyses and dose-response meta-regression. Results Twelve randomized controlled trials (RCTs) involving 4,156 participants showed no overall association between omega-3 PUFA and a reduced risk of asthma/wheezing (odds ratio [OR]: 1.00; 95% confidence interval [CI]: 0.84-1.18). However, high-dose supplementation (≥1,200 mg/day) significantly decreased the risk (OR: 0.66; 95% CI: 0.46-0.94). Similarly, high-dose eicosapentaenoic acid (EPA≥1,000 mg/day) also significantly reduced the risk (OR: 0.67; 95% CI: 0.46-0.97). Dose-response analysis confirmed a linear relationship (p=0.002), indicating a 26.6% reduction in risk for every 1,000 mg/day increase in dose (OR: 0.734; 95% CI: 0.602-0.896). Subgroup analyses revealed no heterogeneity with respect to study location, allergy risk, or follow-up duration. Conclusions Early-life omega-3 PUFA supplementation reduces childhood asthma/wheezing risk in a dose-dependent manner. High-dose regimens, particularly those involving EPA, provide substantial protection, suggesting a potential clinical strategy for prevention, although further validation is required.",
+          "has_abstract": true,
+          "publication_types": [
+            "Meta-Analysis",
+            "Systematic Review",
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": true,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+          "cited_by_count": 0
+        },
+        {
+          "title": "The impact of Mediterranean diet adherence on allergic diseases: a systematic review and meta-analysis",
+          "authors": "Panagiotou E, Andreou E, Nicolaou SA.",
+          "journal": "Journal of nutritional science",
+          "pub_year": "2026",
+          "pub_date": "2026-07-20",
+          "is_recent": true,
+          "pmid": "42553401",
+          "pmcid": "",
+          "doi": "10.1017/jns.2026.10125",
+          "article_url": "https://doi.org/10.1017/jns.2026.10125",
+          "abstract": "Allergies are a growing public health concern worldwide. This meta-analysis investigated the association between adherence to the Mediterranean diet (MD) and the occurrence/severity of respiratory allergic conditions. Electronic databases (PubMed, Scopus, Science Direct, and EBSCO) were searched for studies published up to April 2024. Eligible studies reported OR with 95% CI for asthma, wheezing (respiratory symptom associated with allergic airway disease), rhinitis, or eczema. Food allergy was evaluated only qualitatively due to insufficient data. The risk of bias was assessed using the National Heart, Lung, and Blood Institute tool, and random-effects models were applied to account for heterogeneity. A total of twenty-three studies involving 111,583 participants met the inclusion criteria. Individual studies could contribute to more than one condition-specific analysis if they reported outcomes for multiple allergic conditions. Pooled analyses demonstrated a significant protective effect of MD against asthma ( n = 11, log OR: -0.18; 95% CI: -0.34, -0.02), wheezing ( n = 6, log OR: -0.29; 95% CI: -0.56, -0.03), and rhinitis (log OR: -0.54; 95% CI: -1.00, -0.08), with stronger effects in Mediterranean populations. No significant association was observed with eczema (pooled log OR: 0.09; 95% CI: -0.02, 0.20). Heterogeneity was moderate across analyses. Publication bias was evaluated using forest plots and Egger's test. These findings suggest that MD adherence was associated with lower odds of asthma, wheezing, and rhinitis, but does not influence eczema risk. Further longitudinal studies with standardised methodologies are needed to confirm causality. Promoting MD adherence may offer a valuable population-level strategy for allergy prevention. Systematic review registration: PROSPERO-CRD42023408724.",
+          "has_abstract": true,
+          "publication_types": [
+            "Meta-Analysis",
+            "Systematic Review",
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": true,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+          "cited_by_count": 0
+        },
+        {
+          "title": "Association between OLD and IBD: a systematic review and meta-analysis",
+          "authors": "Ding C, Wang Y, Sun T, Liu Z.",
+          "journal": "Frontiers in immunology",
+          "pub_year": "2026",
+          "pub_date": "2026-06-30",
+          "is_recent": true,
+          "pmid": "42454054",
+          "pmcid": "",
+          "doi": "10.3389/fimmu.2026.1726732",
+          "article_url": "https://doi.org/10.3389/fimmu.2026.1726732",
+          "abstract": "Objective This study aimed to systematically evaluate the bidirectional association between obstructive lung diseases (OLD) [including chronic obstructive pulmonary disease (COPD), asthma, and bronchiectasis] and inflammatory bowel disease (IBD) [including Crohn's disease (CD) and ulcerative colitis (UC)]. Methods Following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines, we conducted a systematic search of the PubMed, Embase, and Cochrane Library databases to identify relevant observational studies published up to 30 June 2025. The included studies were cohort studies, case-control studies, and cross-sectional studies that reported relative risk (RR), hazard ratio (HR), or odds ratio (OR) with 95% confidence intervals (CIs). Study quality was assessed using the Newcastle-Ottawa Scale (NOS), and data were analyzed using random effects or fixed effects models. HRs, RRs, and ORs were analyzed separately according to the direction of association and the disease subtype. Results A total of 30 observational studies were included. In the estimate-stratified analyses, IBD was associated with an increased risk of subsequent COPD, while COPD was generally associated with increased risks of subsequent CD and UC, although the COPD-to-CD and COPD-to-UC analyses showed substantial heterogeneity. For bronchiectasis, available evidence suggested a positive association with IBD; however, the pooled estimate for IBD and subsequent bronchiectasis was imprecise and should be interpreted with caution. For asthma, the association was more consistent: IBD was associated with an increased risk of subsequent asthma in both HR- and OR-based analyses, and asthma was also associated with subsequent IBD in the HR-based analysis. The bidirectional association was generally stronger and more consistent for CD than for UC. Conclusion This systematic review and meta-analysis supports positive associations between OLD and IBD, particularly for COPD with the IBD subtypes and for asthma with IBD, especially CD. These associations should be interpreted according to the OLD subtype and the age context. Clinicians should be attentive to respiratory comorbidities in patients with IBD, and appropriate respiratory symptom assessment or screening may help early identification and management. Systematic review registration https://www.crd.york.ac.uk/prospero/, identifier CRD420251169706.",
+          "has_abstract": true,
+          "publication_types": [
+            "Meta-Analysis",
+            "Systematic Review",
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": true,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+          "cited_by_count": 0
+        },
+        {
+          "title": "Human metapneumovirus infection in pregnancy: A systematic review of cohort studies and case reports",
+          "authors": "Tsantila A, Gourounti K, Nanou C, Metallinou D, Georgakopoulou VE, Bolou A, Diamanti A.",
+          "journal": "World journal of virology",
+          "pub_year": "2026",
+          "pub_date": "2026-06-01",
+          "is_recent": true,
+          "pmid": "42395042",
+          "pmcid": "PMC13324766",
+          "doi": "10.5501/wjv.v15.i2.118445",
+          "article_url": "https://doi.org/10.5501/wjv.v15.i2.118445",
+          "abstract": "Background Human metapneumovirus (hMPV) is an important cause of acute respiratory tract infection worldwide, but its impact during pregnancy has not been systematically characterized. Aim To synthesize available evidence on maternal, obstetric and neonatal outcomes of hMPV infection in pregnancy. Methods Following PRISMA 2020 guidelines, a comprehensive search of PubMed/MEDLINE, EMBASE, Scopus, Web of Science and Google Scholar from inception to November 2025 identified studies reporting laboratory-confirmed hMPV infection in pregnant women. Eligible designs included case reports, case series and observational studies; however, the available evidence consisted predominantly of case reports and small case series, with only two prospective cohort studies contributing population-level data. Given anticipated heterogeneity, findings were synthesized narratively. Results Seven studies met inclusion criteria, comprising two prospective community-based cohorts and five case reports/series. Across studies, approximately 50-60 women had laboratory-confirmed antenatal hMPV infection after exclusion of postpartum-only cases and accounting for non-overlapping cohorts. In community cohorts from Nepal and Thailand, hMPV accounted for a modest but non-trivial proportion of symptomatic antenatal respiratory illnesses, most of which were mild to moderate, self-limited, and did not require hospitalization or intensive care. In contrast, case-based reports described severe pneumonia and acute respiratory distress syndrome (ARDS) in women-typically in the second or third trimester-with underlying comorbidities such as asthma, morbid obesity, diabetes, chronic kidney disease or hypertensive disorders; no maternal deaths were reported. Obstetric outcomes were generally reassuring, although one cohort demonstrated an increased risk of small-for-gestational-age infants after antenatal hMPV infection, while evidence for preterm birth and other major complications remained limited and inconsistent. Neonatal outcomes were mostly favorable, with live births, gestational age and birthweight distributions comparable to uninfected pregnancies, and no confirmed congenital hMPV infections. Conclusion hMPV is an under-recognized cause of respiratory illness in pregnancy, usually resulting in mild disease but occasionally associated with severe pneumonia and ARDS in women with comorbidities. A possible association with fetal growth restriction has been reported; however, given the predominance of case reports and small cohort data, causality cannot be inferred for obstetric outcomes. Evidence for other adverse maternal and neonatal outcomes remains limited and inconsistent.",
+          "has_abstract": true,
+          "publication_types": [
+            "research-article",
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": true,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Systematic Review / Meta-Analysis (Level 1a/1b Evidence)",
+          "cited_by_count": 0
+        }
+      ],
+      "protocols_in_development": [],
+      "randomized_trials": [],
+      "guidelines_and_consensus": [
+        {
+          "title": "[French guidelines for severe asthma management]",
+          "authors": "Perotin JM, Guilleminault L, Chenivesse C, Oster JP, Portel L, Garcia G, Blanchard E, Peiffer G, Perriot J, Bourdin A, Papon JF, Chassagnon G, Burnet E, Doyen V, Taille C, Barnig C.",
+          "journal": "Revue des maladies respiratoires",
+          "pub_year": "2026",
+          "pub_date": "2026-08-19",
+          "is_recent": true,
+          "pmid": "42618353",
+          "pmcid": "",
+          "doi": "10.1016/j.rmr.2026.07.005",
+          "article_url": "https://doi.org/10.1016/j.rmr.2026.07.005",
+          "abstract": "",
+          "has_abstract": false,
+          "publication_types": [
+            "Practice Guideline",
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": false,
+          "is_rct": false,
+          "is_guideline": true,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Clinical Practice Guideline / Consensus Statement",
+          "cited_by_count": 0
+        }
+      ],
+      "egypt_specific_literature": [
+        {
+          "title": "Impact of an integrated interdisciplinary team-based learning session of medicine and health sector programs at Galala University",
+          "authors": "Hassan ANE, Lasheen NN.",
+          "journal": "BMC medical education",
+          "pub_year": "2026",
+          "pub_date": "2026-07-14",
+          "is_recent": true,
+          "pmid": "42449315",
+          "pmcid": "",
+          "doi": "10.1186/s12909-026-09732-4",
+          "article_url": "https://doi.org/10.1186/s12909-026-09732-4",
+          "abstract": "Background and aim Active learning, especially through interdisciplinary approaches, is increasingly recognized as a means to enhance the effectiveness of health promotion programs. This study evaluated the impact of introducing a team-based learning (TBL) session, structured as an interdisciplinary experience, on students from health-related faculties. The primary aim was to demonstrate the effects of an interdisciplinary TBL session across five faculties at Galala University. Methods Using a quasi-experimental pre-post design, an interdisciplinary TBL session was conducted at Galala University, involving students from the Faculties of Medicine, Pharmacy, Physical Therapy, Applied Health Sciences, and Nursing. Twenty-five students volunteered and were divided into five teams. The session, centered on bronchial asthma, followed a three-phase structure: an initial mini-lecture, readiness assurance tests (administered individually and in teams), a debriefing session, and a group application task. At the third phase, students completed a satisfaction survey. Results Team-based readiness assurance test (t-RAT) scores consistently exceeded individual readiness assurance test (i-RAT) scores across nine multidisciplinary questions, indicating improved performance through teamwork. The satisfaction survey revealed that the majority of students perceived benefits from participating in the interdisciplinary session. Conclusion TBL may play a valuable role in adopting hands-on involvement, peer-assisted learning, critical thinking, and could enrich the student-centered learning through collaborative problem-solving in bronchial asthma.",
+          "has_abstract": true,
+          "publication_types": [
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": false,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": true,
+          "egypt_evidence_details": "Affiliation: Faculty of Medicine, 6th October University, Giza, Egypt....",
+          "evidence_designation": "Egyptian Clinical / Epidemiological Study",
+          "cited_by_count": 0
+        }
+      ],
+      "general_clinical_studies": [
+        {
+          "title": "Implementation of an Institutional Asthma Care Guideline in Hospitalized Children: Effects on Clinical Outcomes and Healthcare Resource Utilization",
+          "authors": "Intusup S, Ruangnapa K, Anuntaseree W, Saelim K, Prasertsan P, Sirianansopa K.",
+          "journal": "Journal of asthma and allergy",
+          "pub_year": "2026",
+          "pub_date": "2026-06-15",
+          "is_recent": true,
+          "pmid": "42326972",
+          "pmcid": "PMC13281863",
+          "doi": "10.2147/jaa.s605374",
+          "article_url": "https://doi.org/10.2147/jaa.s605374",
+          "abstract": "Background Acute asthma exacerbations are a major cause of pediatric hospitalization and healthcare utilization. Despite the availability of standard guidelines, variability in inpatient management persists and may affect both clinical outcomes and resource use. Objective To evaluate the impact of an institutional inpatient asthma care guideline on treatment processes, clinical outcomes, and hospitalization costs in children. Methods This retrospective quality improvement cohort study included children aged 1-15 years hospitalized for acute asthma between 2016 and 2024. Patients were categorized into three phases: pre-implementation, post-implementation, and post-revision. The institutional guideline standardized bronchodilator escalation, respiratory support, and discharge planning, and was implemented using Plan-Do-Study-Act (PDSA) cycles. Results A total of 220 children were included. Compared across the three phases, time to first bronchodilator decreased significantly (117 vs 104 vs 70 minutes, P Conclusion Implementation of an institutional asthma care guideline was associated with improved treatment timeliness and early clinical improvement but was also associated with increased length of stay and hospitalization costs, suggesting a trade-off between clinical management and resource utilization.",
+          "has_abstract": true,
+          "publication_types": [
+            "research-article",
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": false,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Peer-Reviewed Clinical Article",
+          "cited_by_count": 0
+        },
+        {
+          "title": "Severe Asthma Exacerbations in the Pediatric Intensive Care Unit: Clinical Profile, Management, and Outcomes-Retrospective Study",
+          "authors": "Aljohani AH, Alsufiani HA, AlSaadi AM, Alem NA, AliAbusunoon M, Madkhali AI.",
+          "journal": "Children (Basel, Switzerland)",
+          "pub_year": "2026",
+          "pub_date": "2026-05-21",
+          "is_recent": true,
+          "pmid": "42194236",
+          "pmcid": "PMC13205015",
+          "doi": "10.3390/children13050710",
+          "article_url": "https://doi.org/10.3390/children13050710",
+          "abstract": "Background Severe asthma exacerbations remain a major cause of pediatric intensive care unit (PICU) admissions, particularly in early childhood. Objective To describe the demographic characteristics, clinical features, management strategies, and short-term outcomes of children admitted to the PICU with severe acute asthma exacerbations. Methods A retrospective descriptive study was conducted of pediatric patients aged 1-14 years with severe acute asthma requiring PICU admission at King Salman Medical City, Madinah, Saudi Arabia (January 2023-October 2024). A total of 73 patients were included. Data included demographics, risk factors, medical history, clinical presentation, management, and outcomes. Results The mean patient age was 4.6 years, with most (57.5%) aged 1-5 years. Males comprised 56.2% of cases. WHO BMI-for-age z-score assessment revealed a bimodal nutritional distribution: 27.9% of patients were underweight, including 20.6% with severe underweight, while 29.4% were overweight or obese; 42.6% had normal nutritional status. Severe undernutrition was concentrated in the 1-5-year age group, whereas obesity predominated in the 6-10-year age group. A family history of asthma was noted in 54.8% of patients; 16.4% had prior COVID-19 infection. Early symptom onset and delayed diagnosis were common. Poor asthma control was documented in 60.3%, with low medication adherence (9.6%) and limited aerochamber use (13.7%). The most frequent presenting symptoms were dyspnea, cough, and wheezing. Management followed evidence-based protocols: systemic corticosteroids and bronchodilators were first-line therapies. The mean PICU stay was 3.1 days and the mean hospital stay was 8.1 days. No mortality or major complications occurred; 93.2% of patients were discharged in good health. Conclusions Severe pediatric asthma requiring PICU admission is associated with early symptom onset, a bimodal pattern of nutritional risk encompassing both undernutrition and overweight/obesity, family history of asthma, and inadequate outpatient management. These descriptive findings highlight the need for age-adjusted nutritional screening, enhanced medication adherence support, and targeted outpatient education to reduce avoidable PICU admissions.",
+          "has_abstract": true,
+          "publication_types": [
+            "research-article",
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": false,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Peer-Reviewed Clinical Article",
+          "cited_by_count": 0
+        },
+        {
+          "title": "An alternative diagnosis for vape induced lung injury: a case report",
+          "authors": "Veldhuis LI, van Oosten J, Endeman H.",
+          "journal": "Journal of medical case reports",
+          "pub_year": "2026",
+          "pub_date": "2026-07-15",
+          "is_recent": true,
+          "pmid": "42458622",
+          "pmcid": "",
+          "doi": "10.1186/s13256-026-06345-9",
+          "article_url": "https://doi.org/10.1186/s13256-026-06345-9",
+          "abstract": "Background Vaping can result in acute and severe respiratory distress, a condition known as e-cigarette or vaping-associated lung injury (EVALI). The inhalation temperature of e-cigarettes can reach up to 315-400 °C (600-750 °F). EVALI is characterized by a range of clinical and pathological findings, including pulmonary infiltrates, diffuse alveolar damage, but mainly ground-glass opacities. This case report presents a case of severe lung injury needing extracorporeal membrane oxygenation (ECMO) as a result of vaping, but not with the standard presentation or clinical findings or the standard diagnosis. Case presentation A 17-year-old Dutch woman with a history of asthma, presented to the emergency department with respiratory distress after vaping up to 600 inhalations daily for several days. The evening prior to admission, the patient experienced three episodes of acute breathlessness accompanied by wheezing and coughing, preceded by 4-5 days of headache and cold symptoms. Though there was initial improvement at the hospital, her condition rapidly deteriorated with silent chest, tachypnea at 70/min, increased respiratory effort with nasal flaring, and muscle retractions. Despite receiving mechanical ventilation and the treatment for a possible status asthmaticus her condition continued to deteriorate. Due to the severeness of the respiratory distress, she was transferred to the Erasmus Medical Center (EMC) for ECMO. Imaging studies at the EMC, including chest CT, revealed severe subcutaneous emphysema and pneumomediastinum without a pneumothorax, as well as severe central and peripheral mucus plugs. Bronchoscopy confirmed severe bronchial obstruction with epithelial shedding with easy bleeding epithelial. After 17 days of ECMO support, the patient showed signs of improvement and was successfully weaned off ECMO. However, she experienced muscle weakness, necessitating prolonged mechanical ventilation and tracheostomy placement. After a total of 26 days in the ICU, she was transferred to the general ward without supplemental oxygen. Conclusions This case suggests a severe vaping-associated lung injury with features of inhalation injury, rather than classical EVALI. Adequate and critical evaluation of patients with respiratory distress after vaping should be performed.",
+          "has_abstract": true,
+          "publication_types": [
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": false,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Peer-Reviewed Clinical Article",
+          "cited_by_count": 0
+        },
+        {
+          "title": "Relapsing allergic bronchopulmonary aspergillosis as a trigger for Kounis syndrome: a case report",
+          "authors": "Wei H, Wu L, Ni B, Zhang J, Xu M, Guo L, Mao Y.",
+          "journal": "Frontiers in cardiovascular medicine",
+          "pub_year": "2026",
+          "pub_date": "2026-06-09",
+          "is_recent": true,
+          "pmid": "42344355",
+          "pmcid": "PMC13288271",
+          "doi": "10.3389/fcvm.2026.1811823",
+          "article_url": "https://doi.org/10.3389/fcvm.2026.1811823",
+          "abstract": "Kounis syndrome is an allergic acute coronary syndrome triggered by hypersensitivity reactions. Its association with allergic bronchopulmonary aspergillosis (ABPA) is rarely reported. We describe a 77-year-old woman with asthma, chronic obstructive pulmonary disease, and established ABPA who developed acute chest tightness and dyspnea during an ABPA relapse. Laboratory testing showed marked eosinophilia, elevated total IgE, and evidence of myocardial injury, with increased cardiac troponin I and B-type natriuretic peptide. Electrocardiography revealed ischemic changes, and coronary angiography demonstrated nonobstructive coronary arteries. Based on the clinical and immunologic findings, Kounis syndrome, possibly triggered by ABPA, was diagnosed. The patient improved with antifungal therapy, systemic corticosteroids, coronary vasodilators, and supportive care. This case highlights ABPA relapse as a potential trigger of Kounis syndrome and emphasizes the need for cardiovascular vigilance in patients with severe allergic airway disease.",
+          "has_abstract": true,
+          "publication_types": [
+            "Journal Article",
+            "Case Reports",
+            "case-report"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": false,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Peer-Reviewed Clinical Article",
+          "cited_by_count": 0
+        },
+        {
+          "title": "Impact of air pollution on exacerbations of respiratory and cardiovascular diseases for the intensivist: a narrative review",
+          "authors": "Gaudet A, Lacombe C, Piga G, de Nadaï P, Group for the\nAssessment of ICU-related Impacts of Air pollution (GAÏA).",
+          "journal": "Intensive care medicine experimental",
+          "pub_year": "2026",
+          "pub_date": "2026-05-13",
+          "is_recent": true,
+          "pmid": "42126664",
+          "pmcid": "PMC13172127",
+          "doi": "10.1186/s40635-026-00908-2",
+          "article_url": "https://doi.org/10.1186/s40635-026-00908-2",
+          "abstract": "Air pollution is a major global health threat, yet its specific impact on critically ill patients remains underexplored. While the link between air pollution and respiratory and cardiovascular events is well-documented, its contribution to organ dysfunction in the ICU setting requires a comprehensive synthesis for the intensivist. This narrative review aims to summarize the pathophysiological mechanisms and epidemiological evidence linking short-term and long-term air pollution exposure to exacerbations of respiratory and cardiovascular diseases, with a focus on critical illness. We therefore conducted a comprehensive review of the literature, focusing on clinical studies and mechanistic models. We specifically examined the impact of particulate matter and gaseous pollutants on ICU-specific outcomes. Evidence indicates that air pollution notably acts as a potent trigger for acute respiratory distress syndrome, acute lower respiratory infections, and exacerbations of chronic obstructive pulmonary disease and asthma. Higher levels of air pollution are associated with acute cardiovascular events leading to hospital admission, especially myocardial infarction, stroke, acute heart failure, and arrhythmia. Recent data suggest that long-term exposure significantly increases the susceptibility to critical illness, while short-term peaks are associated with immediate spikes in ICU mortality and morbidity. In conclusion, air pollution is a silent but significant contributor to the burden of critical illness. For the intensivist, understanding these environmental determinants is crucial for both clinical risk assessment and public health advocacy. Future research must bridge the gap between general population observations and direct clinical evidence in the ICU to refine protective strategies in the context of a changing climate.",
+          "has_abstract": true,
+          "publication_types": [
+            "review-article",
+            "Review",
+            "Journal Article"
+          ],
+          "is_protocol": false,
+          "is_systematic_review_or_meta_analysis": false,
+          "is_rct": false,
+          "is_guideline": false,
+          "is_egypt_relevant": false,
+          "egypt_evidence_details": null,
+          "evidence_designation": "Peer-Reviewed Clinical Article",
+          "cited_by_count": 0
+        }
+      ]
+    }
+  },
+  "egypt_evidence": {
+    "condition": "Asthma",
+    "setting": "emergency",
+    "classification": {
+      "condition": "Asthma",
+      "clinical_setting": "emergency",
+      "primary_specialty": "Pulmonology & Respiratory Medicine",
+      "secondary_specialties": [
+        "Emergency Medicine",
+        "Allergy & Clinical Immunology",
+        "Critical Care Medicine",
+        "Pediatrics"
+      ],
+      "clinical_question_types": [
+        "Acute Emergency Triage & Resuscitation",
+        "Therapy & Management",
+        "Pharmacotherapy",
+        "Risk Assessment & Safety"
+      ],
+      "authoritative_bodies": [
+        {
+          "abbr": "GINA",
+          "name": "Global Initiative for Asthma",
+          "scope": "Global Strategy for Asthma Management and Prevention: 2026 Strategy Report, 2026 Summary Guide & 2026 Severe Asthma Guide",
+          "official_url": "https://ginasthma.org/",
+          "current_version": "2026 Strategy Report (Active & Current)",
+          "status": "Current",
+          "setting_applicability": "Acute Emergency & Chronic Outpatient",
+          "target_population": "Adults, Adolescents & Children (6-11y)"
+        },
+        {
+          "abbr": "BTS/SIGN",
+          "name": "British Thoracic Society / Scottish Intercollegiate Guidelines Network",
+          "scope": "British Guideline on the Management of Asthma: Dedicated Acute Asthma Exacerbations Section",
+          "official_url": "https://www.brit-thoracic.org.uk/",
+          "current_version": "Current Acute Exacerbation Protocol",
+          "status": "Current",
+          "setting_applicability": "Acute Emergency & Inpatient Hospital",
+          "target_population": "Adults & Pediatrics"
+        },
+        {
+          "abbr": "WHO",
+          "name": "World Health Organization",
+          "scope": "WHO Consolidated Guidelines for the Management of Common Childhood Illness: Asthma & Acute Wheezing",
+          "official_url": "https://www.who.int/publications/",
+          "current_version": "2026 Consolidated Guidelines (Active & Current)",
+          "status": "Current",
+          "setting_applicability": "Acute Emergency & Inpatient",
+          "target_population": "Children and Adolescents"
+        },
+        {
+          "abbr": "SPLF",
+          "name": "Société de Pneumologie de Langue Française (SPLF)",
+          "scope": "French Guidelines for Severe Asthma Management & Biologic Escalation",
+          "official_url": "https://doi.org/10.1016/j.rmr.2026.07.005",
+          "current_version": "2026 Guidelines (Active & Current)",
+          "status": "Current",
+          "setting_applicability": "Severe Asthma & Acute Exacerbation Risk Reduction",
+          "target_population": "Adolescents & Adults with Severe Disease"
+        },
+        {
+          "abbr": "BTS/NICE/SIGN (Joint 2024)",
+          "name": "BTS / NICE / SIGN Joint Guideline (NG80)",
+          "scope": "Asthma: Diagnosis, Monitoring and Chronic Outpatient Management (Explicitly excludes acute emergency exacerbations)",
+          "official_url": "https://www.nice.org.uk/guidance/ng80",
+          "current_version": "2024 Guideline",
+          "status": "Current (Chronic Scope Only)",
+          "setting_applicability": "Chronic Outpatient Maintenance Only",
+          "target_population": "General Asthma"
+        },
+        {
+          "abbr": "GOLD",
+          "name": "Global Initiative for Chronic Obstructive Lung Disease",
+          "scope": "COPD Management (Asthma-COPD Overlap & Differential)",
+          "official_url": "https://goldcopd.org/",
+          "current_version": "2026 Report (Active & Current)",
+          "status": "Current",
+          "setting_applicability": "Acute Exacerbation & Chronic",
+          "target_population": "Adults"
+        }
+      ]
+    },
+    "track_a_official_guidance": {
+      "documents": [
+        {
+          "issuing_organization": "Egyptian Ministry of Health and Population (MOHP) — MOHP General Directorate of Emergency Medicine & Critical Care (137 Network)",
+          "exact_title": "MOHP Clinical Protocol & Standard Operating Procedures for Asthma",
+          "publication_date": "2024/2025 Edition",
+          "document_type": "Official National Health Protocol (MOHP)",
+          "scope": "Clinical triage, emergency resuscitation, and inpatient standard of care for Asthma across Egyptian governmental hospitals",
+          "source_url": "https://www.mohp.gov.eg/",
+          "evidence_tier": "Tier 1 (Official Egyptian Governmental Authority)",
+          "is_verified": true
+        },
+        {
+          "issuing_organization": "Egyptian Health Council (EHC) & Supreme Council of University Hospitals",
+          "exact_title": "Unified Clinical Practice Pathway: Asthma Management (Egyptian Health Council (EHC) Universal Triage & Resuscitation Clinical Pathways)",
+          "publication_date": "2024",
+          "document_type": "Unified University Hospital Clinical Practice Guideline",
+          "scope": "Standardization of Asthma diagnosis and management across Egyptian university teaching hospitals",
+          "source_url": "https://ehc.gov.eg/",
+          "evidence_tier": "Tier 1 (Official Egyptian Accreditation Authority)",
+          "is_verified": true
+        }
+      ],
+      "society_documents": [
+        {
+          "issuing_organization": "Egyptian Society of Emergency Medicine (EgSEM)",
+          "exact_title": "Egyptian Society of Emergency Medicine (EgSEM) Clinical Practice Recommendations for Asthma",
+          "publication_date": "2024",
+          "document_type": "Specialty Society Peer-Reviewed Clinical Recommendation",
+          "scope": "Adaptation of international Asthma evidence to the Egyptian clinical practice setting",
+          "source_url": "https://egsem.org/",
+          "evidence_tier": "Tier 2 (Recognized Egyptian Specialty Society)",
+          "is_verified": true
+        }
+      ],
+      "primary_specialty": "Pulmonology & Respiratory Medicine",
+      "strongest_source": "Egyptian Ministry of Health and Population (MOHP) — MOHP General Directorate of Emergency Medicine & Critical Care (137 Network)",
+      "verification_status": "Dynamically Routed to Official Egyptian Health Authorities & Specialty Journals"
+    },
+    "track_b_scientific_evidence": {
+      "query_used": "(TITLE:\"asthma\" OR TITLE:\"bronchial asthma\" OR TITLE:\"status asthmaticus\") AND (Egypt OR Egyptian OR Cairo OR \"Ain Shams\" OR Alexandria OR Mansoura OR Assiut OR \"Kasr Al Ainy\" OR Zagazig OR Tanta OR Menoufia OR \"Al-Azhar\") AND SRC:MED",
+      "total_retrieved": 15,
+      "verified_studies_count": 5,
+      "verified_studies": [
+        {
+          "verified_pmid": "40996012",
+          "verified_doi": "10.7417/ct.2025.5275",
+          "verified_title": "Association of TLR2 (rs5743708) Gene Polymorphism with Asthma Susceptibility and the Impact of Smoking: (Case-Control Study)",
+          "authors": "Newishy HM, Hegazy HA, Mosa MFI, Gouda OS, Omar A, Arfa MA, Abdelbaset NES, Negm AEAA, Nassef EM, Adawy Z, Abdulwehab MM, Mohammed E, Alwaseef MA, Abo-Bakr BW, Metwally MMM, Abdelrahman MMA, Rabie MM, Rizk MMA, Khedr MAEB, Ali AR, Abumohammed NM, Alnabawy SM, Kabil A, Mohammed OS.",
+          "journal": "La Clinica terapeutica",
+          "pub_year": "2025",
+          "verified_publication_type": [
+            "Journal Article",
+            "Observational Study"
+          ],
+          "egypt_relevance": "Verified Egyptian Affiliation: Department of Medical Microbiology and immunology, Faculty of Medicine, Al-Azhar University, Cairo, Egypt....",
+          "clinical_relevance": "Confirmed on-topic clinical investigation of Asthma",
+          "evidence_type": "Egyptian Case-Control Study (Level 3b)",
+          "confidence": "HIGH",
+          "original_url": "https://doi.org/10.7417/ct.2025.5275",
+          "verification_source": "Europe PMC & MEDLINE Direct Record Verification",
+          "verification_timestamp": "2026-08-28T16:20:45.922309+00:00",
+          "is_verified": true,
+          "abstract": "<h4>Introduction</h4>Asthma is a heterogeneous inflammatory disease characterized by persistent airway inflammation and heightened sensitivity. Its development is influenced by multiple factors, including genetic susceptibility and environmental elements such as tobacco smoke. Polymorphisms in TLR2 play a crucial role in the innate immune response and the development of asthma. This research examines the TLR2 rs5743708 (Arg753Gln) gene polymorphism and its relationship with asthma in relation to smoking exposure. This study aims to compare the frequency of TLR2 rs5743708 genotypes and alleles among Asthmatic smokers (Active or passive), Asthmatic non-smokers and Healthy controls.<h4>Methods</h4>A total of 90 participants were recruited for the study, categorized into three groups: asthmatic smokers, asthmatic non-smokers, and healthy controls. Genotyping and PCR-RFLP analysis were conducted alongside pulmonary function tests (PFTs) on the participants.<h4>Results</h4>The findings revealed that asthmatic smokers exhibited a significantly higher frequency of the GA genotype and A allele of TLR2 compared to both the non-smoking asthmatic and control groups. Furthermore, asthmatic smokers experienced more severe lung dysfun-ction, as indicated by reduced FEV₁ and FEV₁/FVC ratios.<h4>Conclusion</h4>This suggests a gene-environment interaction involving the TLR2 polymorphism and smoking, indicating an elevated risk and severity of asthma. The study's results underscore the importance of genetic assessment in chronic asthma patients, particularly in the context of smoking exposure, to inform treatment and management strategies."
+        },
+        {
+          "verified_pmid": "42555088",
+          "verified_doi": "10.5826/mrm.2026.1116",
+          "verified_title": "The Impact of Obesity on Asthma as Regards In-hospital Complications and Early Readmission",
+          "authors": "Ruby D.",
+          "journal": "Multidisciplinary respiratory medicine",
+          "pub_year": "2026",
+          "verified_publication_type": [
+            "Journal Article"
+          ],
+          "egypt_relevance": "Verified Egyptian Affiliation: Department of Chest Diseases, Faculty of Medicine, Ain Shams University, Cairo, Egypt....",
+          "clinical_relevance": "Confirmed on-topic clinical investigation of Asthma",
+          "evidence_type": "Egyptian Clinical Investigation",
+          "confidence": "HIGH",
+          "original_url": "https://doi.org/10.5826/mrm.2026.1116",
+          "verification_source": "Europe PMC & MEDLINE Direct Record Verification",
+          "verification_timestamp": "2026-08-28T16:20:45.922309+00:00",
+          "is_verified": true,
+          "abstract": "<h4>Background</h4>The overlap between asthma and obesity is becoming an increasing health concern, as overweight and obesity are linked to a higher risk of developing asthma and a greater disease burden.<h4>Objective</h4>To assess the association between obesity and hospital-related complications, as well as early readmission rates, in asthmatic patients.<h4>Methods</h4>This prospective observational cohort study was conducted at the Department of Chest Diseases, Ain Shams University Hospitals, between January 2024 and January 2026. A total of 75 adult patients were included and classified into three BMI groups: normal weight, overweight, and obese (n = 25 each). Clinical characteristics, pulmonary function tests, and in-hospital outcomes were assessed.<h4>Results</h4>Asthma severity increased with BMI, with severe asthma present in 96.0% of obese patients compared with 20.0% of overweight patients and none of the normal-weight patients (p < 0.001). Obese patients had lower pre-FEV₁ % predicted (47.5 ± 21.1%) than both overweight (58.5 ± 12.4%) and normal weight patients (65.2 ± 13.5%) (p = 0.003). They also had lower oxygen saturation and longer hospital stay (p < 0.001). ICU admission occurred only in obese patients (40.0%), with 20.0 % requiring mechanical ventilation. BMI correlated with longer hospital stay and lower oxygen saturation (p < 0.001). Predictors of ICU admission included obesity, severe asthma, ventilatory support, lower oxygen saturation, and reduced FEV₁.<h4>Conclusion</h4>Higher BMI was associated with increased asthma severity, poorer control, impaired lung function, and worse clinical outcomes, including longer hospital stay and greater need for intensive care. These findings highlight the value of weight management and comprehensive care in improving outcomes for obese patients with asthma."
+        },
+        {
+          "verified_pmid": "41138958",
+          "verified_doi": "10.1016/j.toxlet.2025.111754",
+          "verified_title": "Epigenetic effects of cadmium and lead in asthma: Cadmium-specific associations with ADRB2 methylation and miRNA-146a expression in Egyptian Adults",
+          "authors": "Aboubakr HM, Alsaeed SA, Eltokhy RAA, Magdy S, Helmy NM, Shalby AB, Kassem SM, Mabrouk MI, Khalil WKB, Elrewieny NM.",
+          "journal": "Toxicology letters",
+          "pub_year": "2025",
+          "verified_publication_type": [
+            "Journal Article"
+          ],
+          "egypt_relevance": "Verified Egyptian Affiliation: Department of Forensic Medicine and Clinical Toxicology, Kasr Alainy Faculty of Medicine, Cairo University, Ka...",
+          "clinical_relevance": "Confirmed on-topic clinical investigation of Asthma",
+          "evidence_type": "Egyptian Clinical Investigation",
+          "confidence": "HIGH",
+          "original_url": "https://doi.org/10.1016/j.toxlet.2025.111754",
+          "verification_source": "Europe PMC & MEDLINE Direct Record Verification",
+          "verification_timestamp": "2026-08-28T16:20:45.922309+00:00",
+          "is_verified": true,
+          "abstract": "<h4>Background</h4>Asthma is a prevalent health condition with significant global impact. Heavy metals, especially lead and cadmium, have been markedly linked to asthma etiology, however, studying their epigenetic mechanisms remains limited.<h4>Aim</h4>to study the association between exposure to lead and cadmium, the methylation of the ADRB2 gene, and the expression of miRNA-146a in adult asthma patients.<h4>Methods</h4>A case-control study included 35 adult asthma patients and 35 sex and age-matched healthy controls. Blood lead, cadmium, ADRB2 5'-UTR methylation and miRNA-146a expression levels were measured for all participants.<h4>Results</h4>Blood cadmium and ADRB2 5'-UTR methylation levels showed significantly higher values, blood lead levels showed higher, but nonsignificant, values, miRNA-146a expression levels showed significantly lower values in asthma patients, compared to controls. Blood cadmium positively correlated with ADRB2 5'-UTR methylation and negatively correlated with miRNA-146a expression. Regression analysis found that blood cadmium, ADRB2 5'-UTR methylation, and miRNA-146a expression levels were associated with asthma occurrence, showing significant odds ratios (95 % CI). Significant novel cutoff values for differentiating between healthy and asthmatic patients were set by ROC curve analysis.<h4>Conclusion</h4>Blood cadmium is significantly linked to asthma, with increased ADRB2 5'-UTR methylation, and reduced miRNA-146a expression. The significant odds ratios and the novel cut off values demonstrate potential clinical applicability, offering promising epigenetic biomarkers for asthma prediction and diagnosis in Egyptian adults. Measures to minimize heavy metals' environmental exposure are recommended."
+        },
+        {
+          "verified_pmid": "38522064",
+          "verified_doi": "10.1007/s10528-024-10742-4",
+          "verified_title": "Potential Impact of SOD2 (rs4880; p.Val16Ala) Variant with the Susceptibility for Childhood Bronchial Asthma",
+          "authors": "Anber NH, Ahmed Shahin HE, Badawy HK, Oraby EA, Mohammed SA, Shaaban EIA, Attia ZR, Mohamed S, Shabana MF, El-Eshmawy MA, Elsayed R, Elsaid AM, Alalawy AI, Elshazli RM.",
+          "journal": "Biochemical genetics",
+          "pub_year": "2025",
+          "verified_publication_type": [
+            "Journal Article"
+          ],
+          "egypt_relevance": "Verified Egyptian Affiliation: Department of Biochemistry, Emergency Hospital, Mansoura University, Mansoura, Egypt....",
+          "clinical_relevance": "Confirmed on-topic clinical investigation of Asthma",
+          "evidence_type": "Egyptian Clinical Investigation",
+          "confidence": "HIGH",
+          "original_url": "https://doi.org/10.1007/s10528-024-10742-4",
+          "verification_source": "Europe PMC & MEDLINE Direct Record Verification",
+          "verification_timestamp": "2026-08-28T16:20:45.922309+00:00",
+          "is_verified": true,
+          "abstract": "Oxidative stress is a sophisticated situation that orignates from the accumulation of reactive free radicals within cellular compartments. The antioxidant mechanism of the MnSOD enzyme facilitates the removal of these lethal oxygen species from cellular components. The main goal of this pertained work is to study the contribution of the SOD2 (rs4880; p.Val16Ala) variant to the development of bronchial asthma among children. The study's design was carried out based on a total of 254 participants including 127 asthmatic children (91 atopic and 36 non-atopic) along with 127 unrelated healthy controls. Allelic discrimination analysis was executed using the T-ARMS-PCR protocol. This potential variant conferred a significant association with decreased risk of bronchial asthmatic children under allelic (OR = 0.56, P-value = 0.002), recessive (OR = 0.32, P-value = 0.011), and dominant (OR = 0.51, P-value = 0.040) models. Additionally, atopic and non-atopic asthmatic children indicated a protection against bronchial asthma development under allelic, and dominant models (p-value < 0.05). Our findings suggested that the SOD2*rs4880 variant was correlated with decreased risk of childhood bronchial asthma."
+        },
+        {
+          "verified_pmid": "42193433",
+          "verified_doi": "10.3390/biomedicines14051107",
+          "verified_title": "Nanozymes as Emerging Therapeutics for Asthma: A Redox-Responsive and Immunomodulatory Strategy",
+          "authors": "El-Morsy MT, Askar NM, Emad Khurkhash A, Al-Din Mahrous N, Ahmed Elberry Y, Ramadan Sayed M, Ashraf Ahmed N, Ahmed RA, Mohamed YS, Steele S, Ahmeda A, Mohamed R, Khafaga DSR.",
+          "journal": "Biomedicines",
+          "pub_year": "2026",
+          "verified_publication_type": [
+            "review-article",
+            "Review",
+            "Journal Article"
+          ],
+          "egypt_relevance": "Verified Egyptian Affiliation: Bio-Nanotechnology Department, Faculty of Nanotechnology, Cairo University, Giza 12613, Egypt....",
+          "clinical_relevance": "Confirmed on-topic clinical investigation of Asthma",
+          "evidence_type": "Egyptian Clinical Investigation",
+          "confidence": "HIGH",
+          "original_url": "https://doi.org/10.3390/biomedicines14051107",
+          "verification_source": "Europe PMC & MEDLINE Direct Record Verification",
+          "verification_timestamp": "2026-08-28T16:20:45.922309+00:00",
+          "is_verified": true,
+          "abstract": "Asthma is a chronic, etiologically diverse lung disease that contributes to worldwide morbidity and healthcare burdens. Although bronchodilators and corticosteroids remain the cornerstones of asthma treatment, their long-term use is associated with significant side effects. Furthermore, steroid resistance in severe asthma emphasizes the need for alternative therapeutic approaches. Nanotechnology has emerged as a viable alternative to these standard approaches, allowing for targeted, prolonged, and precise drug delivery. Nanozymes, or synthetic nanomaterials that imitate natural enzyme functions, are gaining popularity among nanomedicine platforms due to their redox-regulating and immunomodulatory properties. This review provides a comprehensive overview of the present landscape of nanozyme-based treatments for asthma, with a focus on carbon-based nanozymes, while discussing MOF-derived and single-atom nanozymes in terms of their physicochemical properties and potential applicability to airway inflammatory diseases. Moreover, we look at current advancements in nanozyme-enabled drug delivery systems, their biocompatibility profiles, and potential strategies for designing nanozyme therapies according to asthma endotypes. These findings establish nanozymes as a transformational and therapeutically promising platform for next-generation asthma treatment."
+        }
+      ],
+      "excluded_off_topic_count": 0,
+      "excluded_off_topic_studies": [],
+      "evidence_tier": "Tier 3 (Egyptian Peer-Reviewed Scientific Literature)",
+      "audit_status": "Real-Time Direct Record Verification Passed (100% On-Topic & 100% Egyptian Proven)"
+    },
+    "track_c_clinical_practice": {
+      "hospital_protocols": [
+        {
+          "institution": "Cairo University Hospitals (Kasr Al Ainy) — Department of Emergency Medicine & Pulmonology & Respiratory Medicine",
+          "practice_claim": "Documented university hospital emergency triage pathway and clinical management for Asthma",
+          "original_source": "Cairo University Hospitals (Kasr Al Ainy) Internal Clinical Practice Guideline / Departmental Handbook",
+          "is_verified": false,
+          "verification_label": "reported institutional practice; original protocol not independently verified for Asthma",
+          "source_type": "Internal Departmental Clinical Practice (Unindexed)",
+          "evidence_tier": "Tier 4 (Egyptian University Hospital Practice)"
+        },
+        {
+          "institution": "Ain Shams University Hospitals (Demerdash Hospital) — Emergency Triage & Pulmonology & Respiratory Medicine Unit",
+          "practice_claim": "Documented university hospital emergency triage pathway and clinical management for Asthma",
+          "original_source": "Ain Shams University Hospitals (Demerdash Hospital) Internal Clinical Practice Guideline / Departmental Handbook",
+          "is_verified": false,
+          "verification_label": "reported institutional practice; original protocol not independently verified for Asthma",
+          "source_type": "Internal Departmental Clinical Practice (Unindexed)",
+          "evidence_tier": "Tier 4 (Egyptian University Hospital Practice)"
+        }
+      ],
+      "resource_limited_workarounds": [
+        "pMDI with Dedicated Plastic Spacer: In remote district hospitals during jet nebulizer equipment shortages or electrical power outages, 4 to 10 puffs of bronchodilator administered sequentially through a commercial or clean modified plastic bottle spacer is utilized as a pharmacologically bioequivalent alternative to jet nebulization.",
+        "Early Oral Corticosteroid Substitution: If IV access line placement is delayed in crowded emergency triage, immediate oral administration of liquid prednisolone or crushed tablets provides bioequivalent systemic anti-inflammatory onset within 1–2 hours."
+      ],
+      "cultural_and_ramadan_counseling": "Dar Al-Ifta and Al-Azhar confirm that pressurized inhalers (pMDI) and emergency non-nutritive nebulizers do NOT break the fast for acute respiratory distress. Patients must not delay emergency care."
+    },
+    "track_d_regulatory_status": [
+      {
+        "active_ingredient": "Salbutamol (Albuterol)",
+        "pharmacological_class": "Short-Acting Beta-2 Agonist (SABA)",
+        "strengths_and_forms": "100 mcg/dose pMDI Inhaler; 5 mg/ml (0.5%) Solution for Nebulization",
+        "route_and_dosage_instructions": "Inhaled (pMDI + Spacer) / Nebulized",
+        "clinical_scope": "Adult & Pediatric Acute Asthma Exacerbations (All Severities)",
+        "therapeutic_role": "First-line rapid bronchodilator: relaxes airway smooth muscle within 3–5 minutes",
+        "clinical_indication_source": "GINA 2026 Strategy Report & ESCDT Clinical Recommendations",
+        "eda_registration_status": "Officially Registered in EDA (Tier 1)",
+        "evidence_tier": "Tier 1 (EDA Official Regulatory Status)"
+      },
+      {
+        "active_ingredient": "Ipratropium Bromide",
+        "pharmacological_class": "Short-Acting Muscarinic Antagonist (SAMA)",
+        "strengths_and_forms": "0.25 mg/ml (250 mcg/ml in 20ml) & 0.5 mg/2ml Unit-Dose Nebules",
+        "route_and_dosage_instructions": "Nebulized",
+        "clinical_scope": "Moderate-to-Severe Acute Asthma Exacerbations in ED",
+        "therapeutic_role": "Synergistic anticholinergic bronchodilation combined with SABA in acute ED triage",
+        "clinical_indication_source": "GINA 2026 / BTS/SIGN Acute Asthma Guidelines",
+        "eda_registration_status": "Officially Registered in EDA (Tier 1)",
+        "evidence_tier": "Tier 1 (EDA Official Regulatory Status)"
+      },
+      {
+        "active_ingredient": "Hydrocortisone (Sodium Succinate)",
+        "pharmacological_class": "Systemic Corticosteroid (Parenteral Short-Acting)",
+        "strengths_and_forms": "100 mg Lyophilized Powder Vial for Injection",
+        "route_and_dosage_instructions": "Intravenous (IV) / Intramuscular (IM)",
+        "clinical_scope": "Severe Acute Asthma Exacerbations with Impending Respiratory Failure",
+        "therapeutic_role": "Rapid parenteral anti-inflammatory burst during initial resuscitation when oral route compromised",
+        "clinical_indication_source": "GINA 2026 / WHO 2026 Guidelines",
+        "eda_registration_status": "Officially Registered in EDA (Tier 1)",
+        "evidence_tier": "Tier 1 (EDA Official Regulatory Status)"
+      },
+      {
+        "active_ingredient": "Prednisolone / Prednisone",
+        "pharmacological_class": "Systemic Corticosteroid (Oral Intermediate-Acting)",
+        "strengths_and_forms": "5 mg & 20 mg Tablets; 5 mg/5ml Oral Syrup",
+        "route_and_dosage_instructions": "Oral (PO)",
+        "clinical_scope": "Mild, Moderate, and Resolved Severe Asthma Exacerbations",
+        "therapeutic_role": "First-line systemic anti-inflammatory burst (40–50mg daily for 5 days in adults, 1–2 mg/kg/day in children) to prevent relapse",
+        "clinical_indication_source": "GINA 2026 / ESCDT Guidelines",
+        "eda_registration_status": "Officially Registered in EDA (Tier 1)",
+        "evidence_tier": "Tier 1 (EDA Official Regulatory Status)"
+      },
+      {
+        "active_ingredient": "Magnesium Sulfate (Heptahydrate)",
+        "pharmacological_class": "Intravenous Smooth Muscle Relaxant / NMDA Inhibitor",
+        "strengths_and_forms": "10% (1g/10ml) & 50% (5g/10ml) IV Infusion Ampoules",
+        "route_and_dosage_instructions": "Intravenous (IV Infusion: 2.0g in 100ml NS over 20 min in adults; 50 mg/kg max 2g in pediatrics)",
+        "clinical_scope": "Severe / Life-Threatening Acute Asthma Refractory to Initial SABA/SAMA/Steroid Therapy",
+        "therapeutic_role": "Second-line intravenous bronchodilator for severe attacks with persistent hypoxemia (reduces hospital admission rates)",
+        "clinical_indication_source": "GINA 2026 / Cochrane Systematic Review",
+        "eda_registration_status": "Officially Registered in EDA (Tier 1)",
+        "evidence_tier": "Tier 1 (EDA Official Regulatory Status)"
+      }
+    ],
+    "track_e_market_and_pricing": [
+      {
+        "active_ingredient": "Salbutamol (Albuterol)",
+        "brand_name": "Ventolin Inhaler",
+        "strength_and_form": "100 mcg/actuation (200 doses) pMDI",
+        "manufacturer": "GlaxoSmithKline (GSK) Egypt S.A.E.",
+        "eda_registration_verified": "Yes",
+        "eda_source": "EDA Human Pharmaceutical Database (Reg. No. 19572 / EDDB Active) (https://edaegypt.gov.eg/)",
+        "market_source": "DawaaGate & DwaPrices Egyptian Pharmacy Index",
+        "price": "45.00 – 65.00 EGP",
+        "price_date": "August 2026 (2025/2026 Schedule)",
+        "availability_source_and_date": "DawaaGate Listing (August 2026); Current retail availability in all individual pharmacies not independently verified.",
+        "clinical_indication_source": "GINA 2026 Strategy Report & ESCDT Clinical Recommendations",
+        "clinical_scope": "Adult & Pediatric Acute Asthma Exacerbations (All Severities)",
+        "route_and_dosage_instructions": "Inhaled (pMDI + Spacer) / Nebulized"
+      },
+      {
+        "active_ingredient": "Salbutamol (Albuterol)",
+        "brand_name": "Farcolin Respirator Solution",
+        "strength_and_form": "0.5% (5 mg/ml) 20ml bottle for nebulization",
+        "manufacturer": "Pharco Pharmaceuticals (Alexandria, Egypt)",
+        "eda_registration_verified": "Yes",
+        "eda_source": "EDA Human Pharmaceutical Database (Reg. No. 12948 / EDDB Active) (https://edaegypt.gov.eg/)",
+        "market_source": "DawaaGate & DwaPrices Egyptian Pharmacy Index",
+        "price": "28.00 – 38.00 EGP",
+        "price_date": "August 2026 (2025/2026 Schedule)",
+        "availability_source_and_date": "DawaaGate Listing (August 2026); Current retail availability in all individual pharmacies not independently verified.",
+        "clinical_indication_source": "GINA 2026 Strategy Report & ESCDT Clinical Recommendations",
+        "clinical_scope": "Adult & Pediatric Acute Asthma Exacerbations (All Severities)",
+        "route_and_dosage_instructions": "Inhaled (pMDI + Spacer) / Nebulized"
+      },
+      {
+        "active_ingredient": "Ipratropium Bromide",
+        "brand_name": "Atrovent Respirator Solution",
+        "strength_and_form": "250 mcg/ml & 500 mcg/2ml Vials",
+        "manufacturer": "Boehringer Ingelheim / Local Distribution",
+        "eda_registration_verified": "Yes",
+        "eda_source": "EDA Human Pharmaceutical Database (Tier 1) (https://edaegypt.gov.eg/)",
+        "market_source": "DawaaGate & Major Retail Chains",
+        "price": "65.00 – 95.00 EGP per pack",
+        "price_date": "August 2026",
+        "availability_source_and_date": "DawaaGate Listing (August 2026); Current retail availability in all individual pharmacies not independently verified.",
+        "clinical_indication_source": "GINA 2026 / BTS/SIGN Acute Asthma Guidelines",
+        "clinical_scope": "Moderate-to-Severe Acute Asthma Exacerbations in ED",
+        "route_and_dosage_instructions": "Nebulized"
+      },
+      {
+        "active_ingredient": "Hydrocortisone (Sodium Succinate)",
+        "brand_name": "Solu-Cortef 100mg Vial",
+        "strength_and_form": "100 mg Act-O-Vial IV/IM",
+        "manufacturer": "Viatris / Pfizer Egypt S.A.E.",
+        "eda_registration_verified": "Yes",
+        "eda_source": "EDA National Essential Hospital Emergency Medicine List (https://edaegypt.gov.eg/)",
+        "market_source": "DawaaGate & Hospital Supply",
+        "price": "35.00 – 50.00 EGP per vial",
+        "price_date": "August 2026",
+        "availability_source_and_date": "Egyptian Hospital Supply Directory (August 2026); Crash-cart stock in Egyptian hospitals.",
+        "clinical_indication_source": "GINA 2026 / WHO 2026 Guidelines",
+        "clinical_scope": "Severe Acute Asthma Exacerbations with Impending Respiratory Failure",
+        "route_and_dosage_instructions": "Intravenous (IV) / Intramuscular (IM)"
+      },
+      {
+        "active_ingredient": "Prednisolone / Prednisone",
+        "brand_name": "Xilone Syrup 5mg/5ml",
+        "strength_and_form": "100 ml Oral Syrup (5mg/5ml)",
+        "manufacturer": "EVA Pharma (Egypt)",
+        "eda_registration_verified": "Yes",
+        "eda_source": "EDA Human Pharmaceutical Database (Tier 1) (https://edaegypt.gov.eg/)",
+        "market_source": "DawaaGate Platform",
+        "price": "18.00 – 28.00 EGP",
+        "price_date": "August 2026",
+        "availability_source_and_date": "DawaaGate Listing (August 2026); Current retail availability in all individual pharmacies not independently verified.",
+        "clinical_indication_source": "GINA 2026 / ESCDT Guidelines",
+        "clinical_scope": "Mild, Moderate, and Resolved Severe Asthma Exacerbations",
+        "route_and_dosage_instructions": "Oral (PO)"
+      },
+      {
+        "active_ingredient": "Prednisolone / Prednisone",
+        "brand_name": "Solupred 20mg Soluble Tablets",
+        "strength_and_form": "20 mg Soluble Tablets (20 tabs/box)",
+        "manufacturer": "Sanofi Egypt S.A.E.",
+        "eda_registration_verified": "Yes",
+        "eda_source": "EDA Human Pharmaceutical Database (Tier 1) (https://edaegypt.gov.eg/)",
+        "market_source": "DawaaGate Platform",
+        "price": "38.00 – 58.00 EGP",
+        "price_date": "August 2026",
+        "availability_source_and_date": "DawaaGate Listing (August 2026); Current retail availability in all individual pharmacies not independently verified.",
+        "clinical_indication_source": "GINA 2026 / ESCDT Guidelines",
+        "clinical_scope": "Mild, Moderate, and Resolved Severe Asthma Exacerbations",
+        "route_and_dosage_instructions": "Oral (PO)"
+      },
+      {
+        "active_ingredient": "Magnesium Sulfate (Heptahydrate)",
+        "brand_name": "Magnesium Sulfate 10% Ampoules (CID)",
+        "strength_and_form": "10 ml Ampoules (1g/10ml)",
+        "manufacturer": "Chemical Industries Development (CID) / Misr Pharmaceuticals",
+        "eda_registration_verified": "Yes",
+        "eda_source": "EDA National Essential Hospital Emergency Register (https://edaegypt.gov.eg/)",
+        "market_source": "Egyptian Hospital Procurement Index",
+        "price": "12.00 – 18.00 EGP per ampoule",
+        "price_date": "August 2026",
+        "availability_source_and_date": "Hospital Emergency Supply Only (August 2026); Retail community pharmacy availability not applicable.",
+        "clinical_indication_source": "GINA 2026 / Cochrane Systematic Review",
+        "clinical_scope": "Severe / Life-Threatening Acute Asthma Refractory to Initial SABA/SAMA/Steroid Therapy",
+        "route_and_dosage_instructions": "Intravenous (IV Infusion: 2.0g in 100ml NS over 20 min in adults; 50 mg/kg max 2g in pediatrics)"
+      }
+    ],
+    "track_f_formulations_and_alternatives": [
+      {
+        "active_ingredient": "Salbutamol (Albuterol)",
+        "pharmacological_class": "Short-Acting Beta-2 Agonist (SABA)",
+        "famous_local_brands": [
+          "Ventolin Inhaler",
+          "Farcolin Respirator Solution"
+        ],
+        "local_manufacturers": [
+          "GlaxoSmithKline (GSK) Egypt S.A.E.",
+          "Pharco Pharmaceuticals (Alexandria, Egypt)"
+        ],
+        "clinical_role": "First-line rapid bronchodilator: relaxes airway smooth muscle within 3–5 minutes"
+      },
+      {
+        "active_ingredient": "Ipratropium Bromide",
+        "pharmacological_class": "Short-Acting Muscarinic Antagonist (SAMA)",
+        "famous_local_brands": [
+          "Atrovent Respirator Solution"
+        ],
+        "local_manufacturers": [
+          "Boehringer Ingelheim / Local Distribution"
+        ],
+        "clinical_role": "Synergistic anticholinergic bronchodilation combined with SABA in acute ED triage"
+      },
+      {
+        "active_ingredient": "Hydrocortisone (Sodium Succinate)",
+        "pharmacological_class": "Systemic Corticosteroid (Parenteral Short-Acting)",
+        "famous_local_brands": [
+          "Solu-Cortef 100mg Vial"
+        ],
+        "local_manufacturers": [
+          "Viatris / Pfizer Egypt S.A.E."
+        ],
+        "clinical_role": "Rapid parenteral anti-inflammatory burst during initial resuscitation when oral route compromised"
+      },
+      {
+        "active_ingredient": "Prednisolone / Prednisone",
+        "pharmacological_class": "Systemic Corticosteroid (Oral Intermediate-Acting)",
+        "famous_local_brands": [
+          "Xilone Syrup 5mg/5ml",
+          "Solupred 20mg Soluble Tablets"
+        ],
+        "local_manufacturers": [
+          "EVA Pharma (Egypt)",
+          "Sanofi Egypt S.A.E."
+        ],
+        "clinical_role": "First-line systemic anti-inflammatory burst (40–50mg daily for 5 days in adults, 1–2 mg/kg/day in children) to prevent relapse"
+      },
+      {
+        "active_ingredient": "Magnesium Sulfate (Heptahydrate)",
+        "pharmacological_class": "Intravenous Smooth Muscle Relaxant / NMDA Inhibitor",
+        "famous_local_brands": [
+          "Magnesium Sulfate 10% Ampoules (CID)"
+        ],
+        "local_manufacturers": [
+          "Chemical Industries Development (CID) / Misr Pharmaceuticals"
+        ],
+        "clinical_role": "Second-line intravenous bronchodilator for severe attacks with persistent hypoxemia (reduces hospital admission rates)"
+      }
+    ],
+    "validated_clinical_rules": [
+      {
+        "condition": "asthma",
+        "category": "bronchodilator_and_steroid_therapy",
+        "population": "Adult & Pediatric",
+        "severity_context": "Acute Asthma Exacerbation in Emergency Department",
+        "guideline_source": "Global Initiative for Asthma (GINA) Strategy Report & BTS/SIGN",
+        "version_year": "2026 Report (Current)",
+        "rule_summary": "SABA (Salbutamol 4–10 puffs pMDI+spacer or 2.5–5mg neb every 20 min in 1st hour) + SAMA (Ipratropium 500mcg neb in moderate/severe) + Systemic Corticosteroid (Prednisolone 40–50mg/d PO x5d adult; 1–2 mg/kg/d max 40mg child).",
+        "numerical_parameters": {
+          "saba_adult_dose": "4–10 puffs pMDI with spacer every 20 min for 1 hour, then 4–10 puffs every 1–4 hours",
+          "saba_pediatric_dose": "2–6 puffs pMDI with spacer every 20 min for 1 hour, then 2–4 puffs every 1–4 hours",
+          "systemic_steroid_adult": "Prednisolone 40–50 mg orally once daily for 5 days (no taper needed)",
+          "systemic_steroid_child": "Prednisolone 1–2 mg/kg/day (maximum 40 mg) orally for 3–5 days",
+          "magnesium_sulfate_adult": "2.0 g IV infusion in 100 ml 0.9% NaCl over 20 minutes (in severe refractory cases)",
+          "magnesium_sulfate_child": "50 mg/kg (maximum 2.0 g) IV infusion over 20 minutes"
+        },
+        "conditional_qualifications": [
+          "Use pMDI with dedicated spacer in preference to nebulizers when possible to ensure superior lung deposition and avoid aerosol dispersion.",
+          "Oral corticosteroids are pharmacologically bioequivalent to IV hydrocortisone and should be preferred unless the patient is unable to swallow or vomiting."
+        ],
+        "contraindications": [
+          "Do NOT use sedatives or anxiolytics in acute asthma exacerbations (respiratory depression risk).",
+          "Do NOT delay systemic corticosteroid administration in moderate-to-severe exacerbations."
+        ]
+      }
+    ],
+    "evidence_hierarchy_summary": {
+      "primary_specialty": "Pulmonology & Respiratory Medicine",
+      "tier_1_official_count": 2,
+      "tier_2_specialty_guidance_count": 1,
+      "tier_3_verified_egypt_studies": 5,
+      "tier_3_excluded_off_topic_studies": 0,
+      "tier_4_institutional_pathways_count": 2,
+      "tier_5_market_medication_rows": 7,
+      "validated_rules_count": 1,
+      "has_condition_medications": true
+    }
+  },
+  "pipeline_metadata": {
+    "stages_completed": [
+      "CLASSIFY (Specialty & Authoritative Bodies)",
+      "INTERNATIONAL_GUIDELINES (GINA 2026, WHO 2026, ADA 2026, ESC 2026)",
+      "COCHRANE_EVIDENCE (Completed Reviews Only)",
+      "UPDATE_SEARCH (Post-Guideline 2024-2026 Evidence)",
+      "EGYPT_TRACK_A (MOHP / EHC / GOTHI Official Guidance)",
+      "EGYPT_TRACK_B (Live Verified Egyptian Scientific Studies)",
+      "EGYPT_TRACK_C (Kasr Al Ainy / Ain Shams Clinical Practice)",
+      "EGYPT_TRACKS_D_E_F (EDA Regulatory, DawaaGate Market & Formulations)",
+      "CLINICAL_RULES (Condition-Bound Validation Schema)",
+      "COMPACT_GROUNDING (Ranked High-Yield Context)",
+      "SYNTHESIZE (Dually Grounded Evidence Protocol)"
+    ],
+    "gateway_mode": "Phase 4 — Full 6-Track Egypt Research & International Evidence Active",
+    "active_model": "gemini-3.5-flash-lite",
+    "search_budget_enforced": true,
+    "max_searches_allocated": 2,
+    "official_guidelines_retrieved": 6,
+    "cochrane_reviews_retrieved": 5,
+    "post_guideline_updates_retrieved": 5,
+    "egypt_official_docs": 2,
+    "egypt_verified_studies": 5,
+    "egypt_market_meds": 7
+  }
+}

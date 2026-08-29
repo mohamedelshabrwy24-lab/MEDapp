@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MedRef - Universal Medical Reference</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏥</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- API Key Modal -->
+    <div id="api-key-modal" class="modal-overlay hidden">
+        <div class="modal glass-card">
+            <div class="modal-header">
+                <h2>🛡️ MedRef Server Gateway Setup</h2>
+                <p>Private Server-Side Credential Configuration</p>
+            </div>
+            <div class="modal-body">
+                <p>To use MedRef, the local server needs a Google Gemini API key. Your key will be saved securely to your local private <code>.env</code> file. It is <strong>never stored in the browser</strong> and <strong>never exposed over public networks</strong>.</p>
+                <div class="input-group">
+                    <label for="api-key-input">Gemini API Key</label>
+                    <input type="password" id="api-key-input" placeholder="AIzaSy...">
+                </div>
+                <div class="api-help">
+                    <p>Don't have an API key? <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">Get a free key from Google AI Studio</a></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="save-api-key-btn" class="btn-primary">Save to Server .env</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="spinner-container">
+            <div class="medical-spinner">🏥</div>
+            <div class="spinner-ring"></div>
+        </div>
+        <p class="loading-text">Searching medical guidelines...</p>
+    </div>
+
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>🏥 MedRef</h1>
+                <span class="tagline">Universal Medical Reference</span>
+            </div>
+            <nav class="header-nav">
+                <button id="nav-history-btn" class="nav-btn" title="Search History" aria-label="Search History">
+                    <span class="icon">📋</span>
+                </button>
+                <button id="theme-toggle-btn" class="nav-btn" title="Toggle Theme" aria-label="Toggle Theme">
+                    <span class="icon">🌙</span>
+                </button>
+                <button id="nav-settings-btn" class="nav-btn" title="Settings" aria-label="Settings">
+                    <span class="icon">⚙️</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero-section" class="hero">
+            <div class="hero-bg">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Medical Reference<br><span class="gradient-text">Assistant</span></h1>
+                <p class="hero-subtitle">Evidence-based guidelines & common practice protocols. Powered by AI.</p>
+                
+                <div class="search-wrapper">
+                    <form id="search-form" class="search-form">
+                        <div class="search-input-container">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="search-input" placeholder="Enter condition (e.g., Hypertension, UTI, Pneumonia...)" autocomplete="off">
+                            
+                            <div class="setting-toggle">
+                                <button type="button" class="setting-btn setting-btn-active" data-setting="emergency">
+                                    <span class="icon">🚨</span> Emergency
+                                </button>
+                                <button type="button" class="setting-btn" data-setting="outpatient">
+                                    <span class="icon">🏥</span> Outpatient
+                                </button>
+                            </div>
+                            
+                            <button type="submit" id="search-btn" class="btn-search">
+                                <span>Search</span>
+                                <span class="shortcut">↵</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="quick-chips">
+                    <p class="chips-label">Common Conditions:</p>
+                    <div class="chips-container" id="common-conditions">
+                        <button class="chip" data-query="Hypertension">❤️ Hypertension</button>
+                        <button class="chip" data-query="Pneumonia">🫁 Pneumonia</button>
+                        <button class="chip" data-query="Diabetic Ketoacidosis">🩸 DKA</button>
+                        <button class="chip" data-query="Urinary Tract Infection">💊 UTI</button>
+                        <button class="chip" data-query="Stroke">🧠 Stroke</button>
+                        <button class="chip" data-query="Fracture Management">🦴 Fracture Management</button>
+                        <button class="chip" data-query="Asthma">💨 Asthma</button>
+                        <button class="chip" data-query="Heart Failure">🫀 Heart Failure</button>
+                        <button class="chip" data-query="Sepsis">🔥 Sepsis</button>
+                        <button class="chip" data-query="Anemia">🩺 Anemia</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="results hidden">
+            <div class="results-header">
+                <button id="back-btn" class="btn-back">
+                    <span class="icon">←</span> Back to Search
+                </button>
+                <div class="results-title-container">
+                    <h2 id="results-title" class="results-title">Condition Name</h2>
+                    <span id="results-setting-badge" class="setting-badge">🚨 Emergency</span>
+                </div>
+                <div class="results-actions">
+                    <button id="copy-btn" class="action-btn" title="Copy to Clipboard">
+                        <span class="icon">📋</span> Copy
+                    </button>
+                </div>
+            </div>
+
+            <div class="results-tabs-container">
+                <div id="results-tabs" class="results-tabs">
+                    <button class="tab-btn tab-btn-active" data-tab="guidelines" id="tab-guidelines">
+                        <span class="icon">📋</span> Evidence-Based Guidelines
+                    </button>
+                    <button class="tab-btn" data-tab="common" id="tab-common">
+                        <span class="icon">🏛️</span> Common & Traditional Practice
+                    </button>
+                </div>
+            </div>
+
+            <div class="tab-content-container">
+                <!-- Guidelines Tab Content -->
+                <div id="guidelines-content" class="tab-content">
+                    <!-- Populated dynamically -->
+                </div>
+
+                <!-- Common Practice Tab Content -->
+                <div id="common-practice-content" class="tab-content hidden">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <div id="grounding-sources" class="grounding-sources">
+                <!-- Sources populated dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- History Sidebar -->
+    <div id="sidebar-backdrop" class="sidebar-backdrop hidden"></div>
+    <aside id="history-sidebar" class="history-sidebar">
+        <div class="sidebar-header">
+            <h3>Search History</h3>
+            <button id="close-history-btn" class="close-btn" aria-label="Close History">×</button>
+        </div>
+        <div class="sidebar-content">
+            <div class="history-controls">
+                <input type="text" id="history-search" placeholder="Filter history...">
+                <button id="clear-history-btn" class="btn-danger-outline">Clear All</button>
+            </div>
+            <ul id="history-list" class="history-list">
+                <!-- History items populated dynamically -->
+            </ul>
+            <div id="empty-history" class="empty-state">
+                <span class="icon">📭</span>
+                <p>Your search history is empty.</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Error Display -->
+    <div id="error-display" class="error-display hidden">
+        <div class="error-card glass-card">
+            <div class="error-icon">⚠️</div>
+            <h3 id="error-title">An Error Occurred</h3>
+            <p id="error-message">Something went wrong while fetching the guidelines.</p>
+            <div class="error-actions">
+                <button id="error-retry-btn" class="btn-primary">Try Again</button>
+                <button id="error-back-btn" class="btn-secondary">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="disclaimer">
+            <span class="icon">⚠️</span>
+            <p><strong>Disclaimer:</strong> MedRef is a learning aid and quick reference tool only. It does NOT replace clinical judgment or hospital-specific protocols. Always follow your institution's guidelines and consult senior clinicians.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="gemini.js?v=8"></script>
+    <script src="app.js?v=8"></script>
+</body>
+</html>

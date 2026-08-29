@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedRef — Grounding Diagnostic v2</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #0a1020;
+            color: #f8fafc;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        h1 { margin-bottom: 0.5rem; font-size: 1.5rem; }
+        .subtitle { color: #94a3b8; margin-bottom: 2rem; font-size: 0.9rem; }
+        .test-section {
+            background: #111827;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .test-section h2 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #60a5fa;
+        }
+        .status {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        .status-pending { background: rgba(245,158,11,0.15); border-left: 3px solid #f59e0b; color: #fbbf24; }
+        .status-success { background: rgba(16,185,129,0.15); border-left: 3px solid #10b981; color: #34d399; }
+        .status-error { background: rgba(239,68,68,0.15); border-left: 3px solid #ef4444; color: #f87171; }
+        .status-info { background: rgba(59,130,246,0.15); border-left: 3px solid #3b82f6; color: #93c5fd; }
+        .btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        .btn:hover { background: #2563eb; }
+        .btn:disabled { background: #475569; cursor: not-allowed; }
+        .api-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 0.5rem;
+            background: #1e293b;
+            color: #f8fafc;
+            font-size: 0.95rem;
+            margin: 0.5rem 0;
+        }
+        pre {
+            background: #1e293b;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 0.75rem;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .detail-toggle {
+            color: #60a5fa;
+            cursor: pointer;
+            font-size: 0.85rem;
+            text-decoration: underline;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+        .hidden { display: none; }
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #475569;
+            border-top-color: #3b82f6;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .test-number {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔬 MedRef — Grounding Diagnostic v2</h1>
+    <p class="subtitle">Fixed: Now tests newer Gemini models (3.6-flash, 3.5-flash, etc.) and verifies each model actually works before testing grounding.</p>
+
+    <div class="test-section">
+        <h2>🔑 API Key</h2>
+        <div id="key-status"></div>
+        <input type="password" id="api-key-input" class="api-input" placeholder="Enter API key or leave empty to use saved key">
+        <button class="btn" id="run-btn" onclick="runAllTests()">Run All Diagnostic Tests</button>
+    </div>
+
+    <div class="test-section">
+        <h2><span class="test-number">1</span> Model Discovery & Live Verification</h2>
+        <div id="test1-status"><div class="status status-pending">⏳ Waiting to start...</div></div>
+        <div id="test1-details" class="hidden"></div>
+    </div>
+
+    <div class="test-section">
+        <h2><span class="test-number">2</span> Google Search Grounding Test</h2>
+        <div id="test2-status"><div class="status status-pending">⏳ Waiting to start...</div></div>
+        <div id="test2-details" class="hidden"></div>
+    </div>
+
+    <div class="test-section">
+        <h2><span class="test-number">3</span> Grounding Quality & Egyptian Source Test</h2>
+        <div id="test3-status"><div class="status status-pending">⏳ Waiting to start...</div></div>
+        <div id="test3-details" class="hidden"></div>
+    </div>
+
+    <div class="test-section" id="summary-section" style="display:none;">
+        <h2>📊 Diagnostic Summary</h2>
+        <div id="summary-content"></div>
+    </div>
+
+<script>
+const BASE_URL = 'https://generativelanguage.googleapis.com';
+let apiKey = '';
+let confirmedModel = null;
+let confirmedVer = null;
+let groundingSupported = false;
+let groundingVer = null;
+let groundingSourceCount = 0;
+
+function getApiKey() {
+    const inputKey = document.getElementById('api-key-input').value.trim();
+    if (inputKey) return inputKey;
+    return localStorage.getItem('medref_api_key') || localStorage.getItem('pedem_api_key') || '';
+}
+
+function setStatus(testId, type, html) {
+    document.getElementById(`${testId}-status`).innerHTML = `<div class="status status-${type}">${html}</div>`;
+}
+function addStatus(testId, type, html) {
+    document.getElementById(`${testId}-status`).innerHTML += `<div class="status status-${type}">${html}</div>`;
+}
+function setDetails(testId, content) {
+    const el = document.getElementById(`${testId}-details`);
+    el.innerHTML = `<span class="detail-toggle" onclick="this.parentElement.querySelector('pre').classList.toggle('hidden')">Toggle raw details ▾</span><pre class="hidden">${escapeHtml(typeof content === 'string' ? content : JSON.stringify(content, null, 2))}</pre>`;
+    el.classList.remove('hidden');
+}
+function escapeHtml(s) {
+    return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function isExcluded(id) {
+    return /robotics|lyria|tts|deep-research|computer-use|omni|clip|imagen|veo|embedding|video|eap|tuning|custom|thinking/.test(id);
+}
+
+// Try a real call to verify the model works
+async function verifyModel(modelId, ver) {
+    const url = `${BASE_URL}/${ver}/models/${modelId}:generateContent?key=${apiKey}`;
+    const body = {
+        contents: [{ role: 'user', parts: [{ text: 'Reply with exactly: MODEL_OK' }] }],
+        generationConfig: { temperature: 0, maxOutputTokens: 20 }
+    };
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 12000);
+    try {
+        const res = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+            signal: controller.signal
+        });
+        clearTimeout(timer);
+        if (!res.ok) return { ok: false, status: res.status, body: await res.text() };
+        const data = await res.json();
+        const text = data.candidates?.[0]?.content?.parts?.find(p => p.text)?.text || '';
+        return { ok: true, text: text.trim() };
+    } catch (e) {
+        clearTimeout(timer);
+        return { ok: false, status: 0, body: e.message };
+    }
+}
+
+async function runAllTests() {
+    document.getElementById('run-btn').disabled = true;
+    apiKey = getApiKey();
+    if (!apiKey) {
+        document.getElementById('key-status').innerHTML = '<div class="status status-error">❌ No API key found.</div>';
+        document.getElementById('run-btn').disabled = false;
+        return;
+    }
+    document.getElementById('key-status').innerHTML = `<div class="status status-success">✅ API key loaded (${apiKey.substring(0, 8)}...${apiKey.substring(apiKey.length - 4)})</div>`;
+
+    await test1_findWorkingModel();
+    if (confirmedModel) {
+        await test2_grounding();
+        await test3_groundingQuality();
+    }
+    showSummary();
+    document.getElementById('run-btn').disabled = false;
+}
+
+// ──────────────────────────────────────────
+// TEST 1: Discover models AND verify each until one works
+// ──────────────────────────────────────────
+async function test1_findWorkingModel() {
+    setStatus('test1', 'pending', '<span class="spinner"></span> Discovering models...');
+    const allModels = [];
+
+    for (const ver of ['v1beta', 'v1']) {
+        try {
+            const res = await fetch(`${BASE_URL}/${ver}/models?key=${apiKey}`);
+            if (!res.ok) {
+                if (res.status === 401 || res.status === 403) {
+                    setStatus('test1', 'error', `❌ API key rejected (HTTP ${res.status})`);
+                    return;
+                }
+                continue;
+            }
+            const data = await res.json();
+            for (const m of (data.models || [])) {
+                if (m.supportedGenerationMethods?.includes('generateContent')) {
+                    const id = m.name.replace('models/', '');
+                    if (!allModels.find(x => x.id === id) && !isExcluded(id)) {
+                        allModels.push({ id, ver, displayName: m.displayName || id });
+                    }
+                }
+            }
+        } catch (e) {
+            addStatus('test1', 'error', `❌ Network error on ${ver}: ${e.message}`);
+        }
+    }
+
+    if (allModels.length === 0) {
+        setStatus('test1', 'error', '❌ No usable models found.');
+        return;
+    }
+
+    // Priority: try newer models first, then older ones
+    const priorityOrder = [
+        'gemini-3.6-flash',
+        'gemini-3.5-flash',
+        'gemini-3.5-flash-lite',
+        'gemini-2.5-flash',
+        'gemini-2.0-flash',
+        'gemini-2.0-flash-001',
+        'gemini-2.0-flash-lite',
+        'gemini-1.5-flash',
+        'gemini-1.5-flash-latest',
+        'gemini-1.5-flash-002',
+        'gemini-1.5-flash-001',
+        'gemini-1.5-pro',
+        'gemini-1.5-pro-latest',
+        'gemini-pro'
+    ];
+
+    // Sort: prioritized models first, then any remaining flash, then any remaining gemini
+    allModels.sort((a, b) => {
+        let aIdx = priorityOrder.indexOf(a.id);
+        let bIdx = priorityOrder.indexOf(b.id);
+        if (aIdx === -1) aIdx = a.id.includes('flash') ? 100 : 200;
+        if (bIdx === -1) bIdx = b.id.includes('flash') ? 100 : 200;
+        return aIdx - bIdx;
+    });
+
+    setStatus('test1', 'pending', `<span class="spinner"></span> Found ${allModels.length} models. Now verifying each with a real API call...`);
+
+    const top = allModels.slice(0, 12);
+    const tried = [];
+
+    for (const m of top) {
+        addStatus('test1', 'pending', `<span class="spinner"></span> Trying <strong>${m.id}</strong> (${m.ver})...`);
+        const result = await verifyModel(m.id, m.ver);
+        tried.push({ ...m, result });
+
+        if (result.ok) {
+            confirmedModel = m.id;
+            confirmedVer = m.ver;
+
+            setStatus('test1', 'success',
+                `✅ <strong>Confirmed working model: ${m.id}</strong> (${m.ver})<br>` +
+                `Tested ${tried.length} model(s). ${tried.filter(t => !t.result.ok).length} returned errors before finding a working one.`
+            );
+
+            if (tried.some(t => !t.result.ok)) {
+                addStatus('test1', 'info',
+                    '⚠️ <strong>Deprecated/failed models detected:</strong><br>' +
+                    tried.filter(t => !t.result.ok).map(t => `❌ ${t.id}: HTTP ${t.result.status}`).join('<br>')
+                );
+            }
+
+            setDetails('test1', `All ${allModels.length} discovered models:\n${allModels.map(m => `${m.id} (${m.ver})`).join('\n')}\n\nVerification results:\n${tried.map(t => `${t.result.ok ? '✅' : '❌'} ${t.id} (${t.ver}): ${t.result.ok ? 'WORKS' : `HTTP ${t.result.status}`}`).join('\n')}`);
+            return;
+        }
+    }
+
+    setStatus('test1', 'error', `❌ None of the top ${tried.length} models responded successfully.`);
+    setDetails('test1', tried.map(t => `${t.id} (${t.ver}): HTTP ${t.result.status} — ${(t.result.body || '').substring(0, 200)}`).join('\n\n'));
+}
+
+// ──────────────────────────────────────────
+// TEST 2: Google Search Grounding
+// ──────────────────────────────────────────
+async function test2_grounding() {
+    setStatus('test2', 'pending', `<span class="spinner"></span> Testing Google Search grounding on ${confirmedModel} (${confirmedVer})...`);
+
+    // Try both v1beta and v1 for grounding
+    for (const ver of ['v1beta', 'v1']) {
+        addStatus('test2', 'pending', `<span class="spinner"></span> Trying grounding on <strong>${ver}/${confirmedModel}</strong>...`);
+
+        try {
+            const url = `${BASE_URL}/${ver}/models/${confirmedModel}:generateContent?key=${apiKey}`;
+            const body = {
+                contents: [{ role: 'user', parts: [{ text: 'What are the current IDSA guidelines for uncomplicated urinary tract infection treatment in adults? Include the publication year and main first-line recommendations.' }] }],
+                tools: [{ google_search: {} }],
+                generationConfig: { temperature: 0.2, maxOutputTokens: 1500 }
+            };
+
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), 30000);
+
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body),
+                signal: controller.signal
+            });
+            clearTimeout(timer);
+
+            if (!res.ok) {
+                const errText = await res.text();
+                addStatus('test2', 'error', `❌ ${ver}: HTTP ${res.status} — ${errText.substring(0, 150)}`);
+                continue;
+            }
+
+            const data = await res.json();
+            const text = data.candidates?.[0]?.content?.parts?.find(p => p.text)?.text || '';
+            const gm = data.candidates?.[0]?.groundingMetadata;
+
+            if (gm && (gm.groundingChunks?.length > 0 || gm.webSearchQueries?.length > 0)) {
+                const chunks = gm.groundingChunks || [];
+                const webChunks = chunks.filter(c => c.web);
+                const supports = gm.groundingSupports || [];
+                const queries = gm.webSearchQueries || [];
+
+                groundingSupported = true;
+                groundingVer = ver;
+                groundingSourceCount = webChunks.length;
+
+                setStatus('test2', 'success',
+                    `✅ <strong>GROUNDING WORKS on ${ver}/${confirmedModel}!</strong><br><br>` +
+                    `📎 ${webChunks.length} web sources returned<br>` +
+                    `📍 ${supports.length} citation-linked segments<br>` +
+                    `🔍 Search queries: ${queries.length > 0 ? queries.join('; ') : 'N/A'}<br>` +
+                    `📝 Response: ${text.length} chars`
+                );
+
+                if (webChunks.length > 0) {
+                    addStatus('test2', 'info',
+                        '🌐 <strong>Sources found:</strong><br>' +
+                        webChunks.slice(0, 10).map((c, i) =>
+                            `${i+1}. <a href="${c.web.uri}" target="_blank" style="color:#93c5fd;">${escapeHtml(c.web.title || 'Source')}</a>`
+                        ).join('<br>')
+                    );
+                }
+
+                setDetails('test2', data);
+                return; // Success — stop trying other versions
+            } else {
+                addStatus('test2', 'info', `ℹ️ ${ver}: Call succeeded (${text.length} chars) but no groundingMetadata with web sources. Response preview: "${text.substring(0, 120)}..."`);
+                setDetails('test2', data);
+            }
+
+        } catch (e) {
+            addStatus('test2', 'error', `❌ ${ver}: ${e.name === 'AbortError' ? 'Timeout after 30s' : e.message}`);
+        }
+    }
+
+    if (!groundingSupported) {
+        addStatus('test2', 'error', '⚠️ Grounding not confirmed on either API version. Will use enhanced-prompt fallback.');
+    }
+}
+
+// ──────────────────────────────────────────
+// TEST 3: Grounding Quality (Egyptian sources)
+// ──────────────────────────────────────────
+async function test3_groundingQuality() {
+    if (!groundingSupported) {
+        setStatus('test3', 'info', 'ℹ️ Skipped — grounding not confirmed. Will use enhanced-prompt fallback mode.');
+        return;
+    }
+
+    setStatus('test3', 'pending', `<span class="spinner"></span> Testing grounding quality with Egyptian pharmaceutical query on ${groundingVer}/${confirmedModel}...`);
+
+    try {
+        const url = `${BASE_URL}/${groundingVer}/models/${confirmedModel}:generateContent?key=${apiKey}`;
+        const body = {
+            contents: [{ role: 'user', parts: [{ text: 'Search for Egyptian Drug Authority (EDA) registered medications for urinary tract infections. Also search DawaaGate.com and DwaPrices.com for UTI medication brands and prices available in Egyptian pharmacies. List specific Egyptian brand names, manufacturers, and prices if found.' }] }],
+            tools: [{ google_search: {} }],
+            generationConfig: { temperature: 0.2, maxOutputTokens: 2000 }
+        };
+
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 35000);
+
+        const res = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+            signal: controller.signal
+        });
+        clearTimeout(timer);
+
+        if (!res.ok) {
+            setStatus('test3', 'error', `❌ HTTP ${res.status}`);
+            return;
+        }
+
+        const data = await res.json();
+        const text = data.candidates?.[0]?.content?.parts?.find(p => p.text)?.text || '';
+        const gm = data.candidates?.[0]?.groundingMetadata;
+        const chunks = gm?.groundingChunks || [];
+        const webChunks = chunks.filter(c => c.web);
+        const queries = gm?.webSearchQueries || [];
+
+        const domains = webChunks.map(c => {
+            try { return new URL(c.web.uri).hostname; } catch { return 'unknown'; }
+        });
+        const uniqueDomains = [...new Set(domains)];
+
+        const hasGuidelines = domains.some(d => /gina|gold|who|nih|nice|idsa|acc|aha|esc|cdc/.test(d));
+        const hasEgyptian = domains.some(d => /edaegypt|dawaagate|dwaprices|ehc\.gov|mohp|chefaa|yodawy|dawatoday/.test(d));
+        const hasPubMed = domains.some(d => /pubmed|ncbi|cochrane/.test(d));
+        const hasEgyptGeneral = text.toLowerCase().includes('egypt') || domains.some(d => /\.eg/.test(d));
+
+        let html = `📎 ${webChunks.length} sources from ${uniqueDomains.length} unique domains<br>`;
+        html += `🔍 ${queries.length} search queries: ${queries.join('; ')}<br><br>`;
+        html += `<strong>Source Analysis:</strong><br>`;
+        html += `${hasGuidelines ? '✅' : '❌'} International guideline sources<br>`;
+        html += `${hasEgyptian ? '✅' : '⚠️'} Egyptian-specific domains (EDA/DawaaGate/DwaPrices)<br>`;
+        html += `${hasEgyptGeneral ? '✅' : '❌'} Egyptian content found in response<br>`;
+        html += `${hasPubMed ? '✅' : '❌'} PubMed/Cochrane sources<br><br>`;
+        html += `<strong>All domains:</strong><br>${uniqueDomains.map(d => `• ${d}`).join('<br>')}`;
+
+        setStatus('test3', 'success', `✅ <strong>Grounding Quality Report:</strong><br>${html}`);
+
+        // Show response preview
+        addStatus('test3', 'info', `📝 <strong>Response preview (first 500 chars):</strong><br>${escapeHtml(text.substring(0, 500))}...`);
+
+        setDetails('test3', data);
+
+    } catch (e) {
+        setStatus('test3', 'error', `❌ ${e.name === 'AbortError' ? 'Timeout after 35s' : e.message}`);
+    }
+}
+
+// ──────────────────────────────────────────
+// SUMMARY
+// ──────────────────────────────────────────
+function showSummary() {
+    const section = document.getElementById('summary-section');
+    section.style.display = 'block';
+    let html = '';
+
+    // Model info
+    if (confirmedModel) {
+        html += `<div class="status status-success">✅ <strong>Working model confirmed:</strong> ${confirmedModel} (${confirmedVer})</div>`;
+    } else {
+        html += `<div class="status status-error">❌ <strong>No working model found.</strong> Check API key and network.</div>`;
+    }
+
+    // Grounding info
+    if (groundingSupported) {
+        html += `<div class="status status-success">
+            <strong>✅ GOOGLE SEARCH GROUNDING IS SUPPORTED</strong><br><br>
+            • Model: <strong>${confirmedModel}</strong><br>
+            • Grounding API version: <strong>${groundingVer}</strong><br>
+            • Sources returned: <strong>${groundingSourceCount}+</strong><br><br>
+            <strong>🎉 Recommendation:</strong> Proceed with the <strong>3-stage research pipeline with real-time Google Search grounding</strong>. The API supports live web research for both international guidelines and Egyptian sources.
+        </div>`;
+    } else if (confirmedModel) {
+        html += `<div class="status status-error">
+            <strong>⚠️ GOOGLE SEARCH GROUNDING NOT AVAILABLE</strong><br><br>
+            • Model works: <strong>${confirmedModel}</strong><br>
+            • Grounding: <strong>Not supported or not returning web sources</strong><br><br>
+            <strong>Recommendation:</strong> Use the <strong>enhanced-prompt fallback</strong> approach. Research will rely on the AI model's training data with highly structured prompts encoding both protocols. A warning banner will indicate that live web verification is unavailable.
+        </div>`;
+    }
+
+    // Also update the production model cache
+    if (confirmedModel) {
+        html += `<div class="status status-info">
+            <strong>ℹ️ Important:</strong> The production MedRef app's model list is outdated. Model <code>gemini-2.5-flash</code> is deprecated. The working model is now <strong>${confirmedModel}</strong>. This will be updated in the production code.
+        </div>`;
+
+        // Update the cached model for MedRef
+        localStorage.setItem('medref_cached_model', JSON.stringify({ id: confirmedModel, ver: confirmedVer }));
+        html += `<div class="status status-success">✅ Updated MedRef cached model to <strong>${confirmedModel}</strong></div>`;
+    }
+
+    document.getElementById('summary-content').innerHTML = html;
+    section.scrollIntoView({ behavior: 'smooth' });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedKey = localStorage.getItem('medref_api_key') || localStorage.getItem('pedem_api_key');
+    if (savedKey) {
+        document.getElementById('key-status').innerHTML = `<div class="status status-info">ℹ️ Saved API key detected. Click "Run All Diagnostic Tests" to begin.</div>`;
+    } else {
+        document.getElementById('key-status').innerHTML = '<div class="status status-pending">⏳ No saved API key found. Enter one above.</div>';
+    }
+});
+</script>
+</body>
+</html>
