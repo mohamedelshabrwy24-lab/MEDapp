@@ -280,14 +280,27 @@ def application(environ, start_response):
         data = {
             'status': 'healthy',
             'runtime': 'cloud_wsgi',
-            'gemini_configured': bool(key),
-            'gemini_masked': mask_key(key),
+            'credentials': {
+                'gemini_configured': bool(key),
+                'gemini_masked': mask_key(key),
+            },
         }
         body = json.dumps(data).encode('utf-8')
         start_response('200 OK', [
             ('Content-Type', 'application/json'),
             ('Access-Control-Allow-Origin', '*'),
         ])
+        return [body]
+
+    # ── Save Keys (cloud: keys are in Render env vars, not .env file) ──
+    if path == '/api/save_keys' and method == 'POST':
+        key = get_gemini_key()
+        if key:
+            body = json.dumps({'status': 'ok', 'message': 'API key is already configured via server environment variables.'}).encode('utf-8')
+            start_response('200 OK', [('Content-Type', 'application/json'), ('Access-Control-Allow-Origin', '*')])
+        else:
+            body = json.dumps({'status': 'error', 'message': 'Please set GEMINI_API_KEY in Render Dashboard > Environment.'}).encode('utf-8')
+            start_response('400 Bad Request', [('Content-Type', 'application/json'), ('Access-Control-Allow-Origin', '*')])
         return [body]
 
     # ── Research API ──
