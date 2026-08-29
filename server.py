@@ -690,7 +690,7 @@ def run_server(port=None):
     print("  Security      : Credentials isolated server-side in .env")
     print("=======================================================\n")
 
-    with ThreadedHTTPServer(("", port), MedRefGatewayHandler) as httpd:
+    with ThreadedHTTPServer(("0.0.0.0", port), MedRefGatewayHandler) as httpd:
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:
