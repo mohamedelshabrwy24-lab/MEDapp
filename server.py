@@ -41,8 +41,8 @@ from egypt_engine import EgyptResearchEngine
 BASE_DIR = Path(__file__).resolve().parent
 ENV_PATH = BASE_DIR / '.env'
 
-# Instantiate Retrievers
-epmc_retriever = EuropePMCRetriever(timeout=25)
+# Instantiate Retrievers (Bounded fast timeout for cloud execution)
+epmc_retriever = EuropePMCRetriever(timeout=4)
 guidelines_retriever = GuidelinesRetriever(epmc_retriever)
 egypt_engine = EgyptResearchEngine(epmc_retriever)
 

@@ -55,7 +55,7 @@ class GeminiAPI {
     console.log(`[MedRef Engine] 🛡️ Sending research query for "${cleanCondition}" to /api/research...`);
 
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 120000);
+    const timeoutId = setTimeout(() => controller.abort(), 180000);
 
     try {
       const res = await fetch('/api/research', {
