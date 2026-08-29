@@ -56,12 +56,12 @@ USAGE_TRACKER = {
 }
 
 def load_env():
-    """Load configuration from .env file without third-party dependencies."""
+    """Load configuration from system environment variables and .env file."""
     config = {
-        'GEMINI_API_KEY': '',
-        'TAVILY_API_KEY': '',
-        'MAX_SEARCHES_PER_TOPIC': 2,
-        'SERVER_PORT': 8000
+        'GEMINI_API_KEY': os.environ.get('GEMINI_API_KEY', ''),
+        'TAVILY_API_KEY': os.environ.get('TAVILY_API_KEY', ''),
+        'MAX_SEARCHES_PER_TOPIC': os.environ.get('MAX_SEARCHES_PER_TOPIC', '2'),
+        'SERVER_PORT': os.environ.get('PORT', os.environ.get('SERVER_PORT', '8000'))
     }
     if ENV_PATH.exists():
         with open(ENV_PATH, 'r', encoding='utf-8') as f:
@@ -69,7 +69,10 @@ def load_env():
                 line = line.strip()
                 if line and not line.startswith('#') and '=' in line:
                     k, v = line.split('=', 1)
-                    config[k.strip()] = v.strip()
+                    k_clean = k.strip()
+                    v_clean = v.strip()
+                    if not config.get(k_clean):
+                        config[k_clean] = v_clean
     return config
 
 def save_env_keys(gemini_key=None, tavily_key=None, max_searches=None):
